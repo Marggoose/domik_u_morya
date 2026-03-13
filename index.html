@@ -14,8 +14,8 @@
     <!-- Open Graph мета-теги для соцсетей -->
     <meta property="og:title" content="Домик у моря в станице Должанской">
     <meta property="og:description" content="Уютное размещение в 15 минутах от моря. Тихое место, все удобства, мангал и парковка.">
-    <meta property="og:image" content="https://ваш-сайт.ру/img/photo_6_2026-03-09_16-52-27.jpg">
-    <meta property="og:url" content="https://ваш-сайт.ру">
+    <meta property="og:image" content="https://marggoose.github.io/domik_u_morya/img/photo_6_2026-03-09_16-52-27.jpg">
+    <meta property="og:url" content="https://marggoose.github.io/domik_u_morya/">
     <meta property="og:type" content="website">
 
     <!-- Favicon -->
@@ -125,17 +125,96 @@
     </div>
 </section>
 
-<!-- Фотогалерея (с якорем gallery) -->
-<section id="gallery">
+<!-- Фотогалерея - Умная карусель с авто-слайдшоу -->
+<section id="gallery" class="gallery-section">
     <div class="container">
         <h2>Как выглядит наш райский уголок</h2>
-        <div class="photo-grid">
-            <div class="photo-item photo1"><span>Фасад и вход</span></div>
-            <div class="photo-item photo2"><span>Спальня в спокойных тонах</span></div>
-            <div class="photo-item photo3"><span>Двор с мангальной зоной</span></div>
-            <div class="photo-item photo4"><span>Море за углом</span></div>
+        
+        <!-- Основная карусель -->
+        <div class="carousel-container">
+            <div class="carousel-main">
+                <div class="carousel-track" id="carouselTrack">
+                    <div class="carousel-slide">
+                        <img src="img/photo_1_2026-03-09_16-52-27.jpg" alt="Фасад дома у моря" loading="lazy">
+                        <div class="slide-caption">🌅 Фасад и уютный дворик</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="img/photo_2_2026-03-09_16-52-27.jpg" alt="Уютная спальня" loading="lazy">
+                        <div class="slide-caption">🛏️ Спальня в спокойных тонах</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="img/photo_3_2026-03-09_16-52-27.jpg" alt="Мангальная зона" loading="lazy">
+                        <div class="slide-caption">🍖 Зона барбекю с беседкой</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="img/photo_4_2026-03-09_16-52-27.jpg" alt="Море рядом" loading="lazy">
+                        <div class="slide-caption">🌊 Азовское море в двух шагах</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="img/photo_5_2026-03-09_16-52-27.jpg" alt="Гостиная с кухней" loading="lazy">
+                        <div class="slide-caption">🏡 Просторная гостиная</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="img/photo_6_2026-03-09_16-52-27.jpg" alt="Вид на станицу" loading="lazy">
+                        <div class="slide-caption">🌅 Вечерняя Должанская</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="img/photo_7_2026-03-09_16-52-27.jpg" alt="Детская площадка" loading="lazy">
+                        <div class="slide-caption">🧸 Детский уголок во дворе</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="img/photo_8_2026-03-09_16-52-27.jpg" alt="Закат на косе" loading="lazy">
+                        <div class="slide-caption">✨ Знаменитая Должанская коса</div>
+                    </div>
+                </div>
+                
+                <!-- Кнопки навигации -->
+                <button class="carousel-btn prev" id="prevBtn" aria-label="Предыдущее фото">←</button>
+                <button class="carousel-btn next" id="nextBtn" aria-label="Следующее фото">→</button>
+                
+                <!-- Индикатор автопрокрутки -->
+                <div class="autoplay-indicator" id="autoplayIndicator">
+                    <div class="pulse-dot"></div>
+                    <span>авто</span>
+                </div>
+            </div>
+            
+            <!-- Прогресс-бар -->
+            <div class="carousel-progress">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            
+            <!-- Миниатюры -->
+            <div class="thumbnails" id="thumbnails">
+                <div class="thumbnail" data-index="0">
+                    <img src="img/photo_1_2026-03-09_16-52-27.jpg" alt="Фасад">
+                </div>
+                <div class="thumbnail" data-index="1">
+                    <img src="img/photo_2_2026-03-09_16-52-27.jpg" alt="Спальня">
+                </div>
+                <div class="thumbnail" data-index="2">
+                    <img src="img/photo_3_2026-03-09_16-52-27.jpg" alt="Мангал">
+                </div>
+                <div class="thumbnail" data-index="3">
+                    <img src="img/photo_4_2026-03-09_16-52-27.jpg" alt="Море">
+                </div>
+                <div class="thumbnail" data-index="4">
+                    <img src="img/photo_5_2026-03-09_16-52-27.jpg" alt="Гостиная">
+                </div>
+                <div class="thumbnail" data-index="5">
+                    <img src="img/photo_6_2026-03-09_16-52-27.jpg" alt="Вид">
+                </div>
+                <div class="thumbnail" data-index="6">
+                    <img src="img/photo_7_2026-03-09_16-52-27.jpg" alt="Детская">
+                </div>
+                <div class="thumbnail" data-index="7">
+                    <img src="img/photo_8_2026-03-09_16-52-27.jpg" alt="Коса">
+                </div>
+            </div>
+            
+            <!-- Счетчик фото -->
+            <div class="photo-counter" id="photoCounter">1 / 8</div>
         </div>
-        <p style="text-align: center; margin-top: 30px; color: var(--gray-soft); font-style: italic;">✨ Актуальные фото пришлём в мессенджер по запросу</p>
     </div>
 </section>
 
@@ -237,6 +316,168 @@
         }
         
         lastScroll = currentScroll;
+    });
+</script>
+
+<!-- Скрипты для умной галереи -->
+<script>
+    // Галерея с умным авто-слайдшоу
+    const track = document.getElementById('carouselTrack');
+    const slides = document.querySelectorAll('.carousel-slide');
+    const thumbnails = document.querySelectorAll('.thumbnail');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const progressBar = document.getElementById('progressBar');
+    const photoCounter = document.getElementById('photoCounter');
+    const autoplayIndicator = document.getElementById('autoplayIndicator');
+    
+    let currentIndex = 0;
+    let autoplayInterval = null;
+    let isAutoplayActive = true;
+    let inactivityTimer = null;
+    const AUTOPLAY_DELAY = 4000; // 4 секунды между слайдами
+    const INACTIVITY_TIMEOUT = 5000; // 5 секунд бездействия
+    
+    // Обновление позиции карусели
+    function updateCarousel(index, userAction = false) {
+        // Зацикливание
+        if (index < 0) index = slides.length - 1;
+        if (index >= slides.length) index = 0;
+        
+        // Движение трека
+        track.style.transform = `translateX(-${index * 100}%)`;
+        
+        // Обновление активного thumbnail
+        thumbnails.forEach((thumb, i) => {
+            if (i === index) {
+                thumb.classList.add('active');
+            } else {
+                thumb.classList.remove('active');
+            }
+        });
+        
+        // Обновление прогресс бара
+        const progress = ((index + 1) / slides.length) * 100;
+        progressBar.style.width = `${progress}%`;
+        
+        // Обновление счетчика
+        photoCounter.textContent = `${index + 1} / ${slides.length}`;
+        
+        currentIndex = index;
+        
+        // Если действие вызвано пользователем, останавливаем автопрокрутку
+        if (userAction) {
+            pauseAutoplay();
+            resetInactivityTimer();
+        }
+    }
+    
+    // Следующий слайд
+    function nextSlide(userAction = false) {
+        updateCarousel(currentIndex + 1, userAction);
+    }
+    
+    // Предыдущий слайд
+    function prevSlide(userAction = false) {
+        updateCarousel(currentIndex - 1, userAction);
+    }
+    
+    // Запуск автопрокрутки
+    function startAutoplay() {
+        if (autoplayInterval) clearInterval(autoplayInterval);
+        autoplayInterval = setInterval(() => {
+            nextSlide(false);
+        }, AUTOPLAY_DELAY);
+        isAutoplayActive = true;
+        
+        // Обновляем индикатор
+        autoplayIndicator.classList.remove('paused');
+        autoplayIndicator.innerHTML = '<div class="pulse-dot"></div><span>авто</span>';
+    }
+    
+    // Пауза автопрокрутки
+    function pauseAutoplay() {
+        if (autoplayInterval) {
+            clearInterval(autoplayInterval);
+            autoplayInterval = null;
+        }
+        isAutoplayActive = false;
+        
+        // Обновляем индикатор
+        autoplayIndicator.classList.add('paused');
+        autoplayIndicator.innerHTML = '<div class="pulse-dot" style="background: var(--stone-blue); animation: none;"></div><span>пауза</span>';
+    }
+    
+    // Сброс таймера бездействия
+    function resetInactivityTimer() {
+        if (inactivityTimer) clearTimeout(inactivityTimer);
+        
+        // Если автопрокрутка не активна, запускаем таймер для её возобновления
+        if (!isAutoplayActive) {
+            inactivityTimer = setTimeout(() => {
+                startAutoplay();
+            }, INACTIVITY_TIMEOUT);
+        }
+    }
+    
+    // Обработчики событий
+    prevBtn.addEventListener('click', () => {
+        prevSlide(true);
+    });
+    
+    nextBtn.addEventListener('click', () => {
+        nextSlide(true);
+    });
+    
+    thumbnails.forEach(thumb => {
+        thumb.addEventListener('click', () => {
+            const index = parseInt(thumb.dataset.index);
+            updateCarousel(index, true);
+        });
+    });
+    
+    // Клавиатурная навигация
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') {
+            prevSlide(true);
+        } else if (e.key === 'ArrowRight') {
+            nextSlide(true);
+        }
+    });
+    
+    // Touch-события для мобильных
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    track.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    });
+    
+    track.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        if (touchEndX < touchStartX - 50) {
+            nextSlide(true);
+        } else if (touchEndX > touchStartX + 50) {
+            prevSlide(true);
+        }
+    });
+    
+    // Мышь тоже считаем действием
+    track.addEventListener('mouseenter', () => {
+        // Не останавливаем автопрокрутку, просто сбрасываем таймер
+        if (!isAutoplayActive) {
+            resetInactivityTimer();
+        }
+    });
+    
+    // Инициализация - запускаем автопрокрутку
+    updateCarousel(0, false);
+    startAutoplay();
+    
+    // Очистка при уходе со страницы
+    window.addEventListener('beforeunload', () => {
+        if (autoplayInterval) clearInterval(autoplayInterval);
+        if (inactivityTimer) clearTimeout(inactivityTimer);
     });
 </script>
 
