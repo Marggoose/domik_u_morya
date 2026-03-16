@@ -802,39 +802,6 @@ h2:after {
     border-color: white;
 }
 
-/* --- 3. Блок социальных ссылок --- */
-.social-links {
-    margin-top: 30px;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin: 15px 0;
-}
-
-.social-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 60px;
-    height: 60px;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(5px);
-    border-radius: 50%;
-    border: 2px solid var(--sand-warm);
-    color: white;
-    transition: all 0.3s ease;
-}
-
-.social-icon:hover {
-    background: white;
-    color: var(--sea-deep);
-    transform: translateY(-5px) scale(1.1);
-    border-color: var(--olive);
-}
-
 /* ========== ФУТЕР ========== */
 footer {
     background-color: var(--sea-deep);
@@ -981,19 +948,16 @@ footer p:first-child {
     height: 32px;
 }
 
-/* Альтернативный стиль для иконки Max с изображением */
-.social-icon.max img {
-    filter: none;
-}
-
+/* Стили для иконки Max */
 .social-icon.max img {
     width: 28px;
     height: 28px;
     object-fit: contain;
+    filter: brightness(0) invert(1); /* Убедитесь, что это нужно */
 }
 
 .social-icon.max:hover {
-    background: #8A3FB9; /* Более светлый фиолетовый при наведении */
+    background: #8A3FB9;
     border-color: white;
     transform: translateY(-5px) scale(1.1);
     box-shadow: 0 10px 20px rgba(107, 43, 139, 0.4);
@@ -1008,123 +972,7 @@ footer p:first-child {
     box-shadow: 0 10px 20px rgba(0, 136, 204, 0.4);
 }
 
-/* ========== АДАПТИВ ДЛЯ ГАЛЕРЕИ ========== */
-@media (max-width: 1024px) {
-    .info-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .info-item {
-        border-right: none;
-        border-bottom: 2px solid var(--sand-warm);
-        padding: 15px;
-    }
-    
-    .info-item:nth-last-child(-n+2) {
-        border-bottom: none;
-    }
-
-    .mosaic-grid {
-        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-        grid-auto-rows: 230px;
-    }
-    
-    .mosaic-item.mosaic-landscape {
-        grid-column: span 2;
-    }
-    .mosaic-item.mosaic-portrait {
-        grid-row: span 2;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero h1 { font-size: 3rem; }
-    
-    .floating-nav {
-        padding: 10px 15px;
-    }
-    
-    .nav-links {
-        display: none;
-    }
-    
-    .nav-container {
-        justify-content: center;
-    }
-    
-    .hero-content {
-        text-align: center;
-    }
-    
-    .hero-links {
-        justify-content: center;
-    }
-    
-    .info-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .info-item {
-        border-bottom: 2px solid var(--sand-warm);
-        border-right: none;
-        justify-content: center;
-    }
-    
-    .info-item:last-child {
-        border-bottom: none;
-    }
-    
-    h2 { font-size: 2rem; }
-    
-    .cta-section h3 { font-size: 2rem; }
-    .cta-button { font-size: 1.5rem; padding: 15px 35px; }
-    
-    .contact-block { padding: 30px; }
-    
-    .review-cards { grid-template-columns: 1fr; }
-
-    .mosaic-grid {
-        grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: 220px;
-        gap: 15px;
-    }
-    
-    .mosaic-item.mosaic-landscape {
-        grid-column: span 2;
-    }
-    .mosaic-item.mosaic-portrait {
-        grid-row: span 2;
-    }
-    
-    .mosaic-info-block .info-icon {
-        font-size: 2.5rem;
-    }
-    .mosaic-info-block h3 {
-        font-size: 1.2rem;
-    }
-    .mosaic-info-block p {
-        font-size: 0.9rem;
-    }
-
-    .floating-corner {
-        bottom: 15px;
-        right: 15px;
-    }
-    
-    .corner-button {
-        padding: 10px 20px;
-    }
-    
-    .corner-button svg {
-        width: 24px;
-        height: 24px;
-    }
-    
-    .rotating-text {
-        font-size: 0.9rem;
-    }
-}
-
+/* ========== ИСПРАВЛЕННЫЙ АДАПТИВ ========== */
 @media (max-width: 480px) {
     .hero h1 { font-size: 2.2rem; }
     .hero-description { font-size: 1.1rem; }
@@ -1135,12 +983,12 @@ footer p:first-child {
         grid-auto-rows: 250px;
     }
     
+    /* Исправлено: убрали несуществующий класс */
     .mosaic-item.mosaic-landscape,
     .mosaic-item.mosaic-portrait,
-    .mosaic-item.mosaic-square,
     .mosaic-info-block {
-        grid-column: span 1;
-        grid-row: span 1;
+        grid-column: span 1 !important;
+        grid-row: span 1 !important;
     }
 
     .social-icon {
