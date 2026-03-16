@@ -32,7 +32,10 @@
 <nav class="floating-nav" id="floatingNav">
     <div class="nav-container">
         <div class="nav-logo">
-            <span class="logo-icon">🏡</span>
+            <!-- SVG Иконка домика -->
+            <svg class="logo-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 3L2 12H5V20H10V14H14V20H19V12H22L12 3Z" fill="currentColor"/>
+            </svg>
             <span>Домик в Должанской</span>
         </div>
         <div class="nav-links">
@@ -60,64 +63,59 @@
     </div>
 </section>
 
-<!-- 💰 Информационная плашка (под hero) -->
-<div class="info-bar">
-    <div class="container">
-        <div class="info-grid">
-            <div class="info-item">
-                <span class="info-icon">🏖️</span>
-                <div>
-                    <div class="info-label">До моря</div>
-                    <div class="info-value">350 метров</div>
-                </div>
-            </div>
-            <div class="info-item">
-                <span class="info-icon">🛏️</span>
-                <div>
-                    <div class="info-label">Спальни</div>
-                    <div class="info-value">2 уютные</div>
-                </div>
-            </div>
-            <div class="info-item">
-                <span class="info-icon">💰</span>
-                <div>
-                    <div class="info-label">Цена от</div>
-                    <div class="info-value price">2 500 ₽/сутки</div>
-                </div>
-            </div>
-            <div class="info-item">
-                <span class="info-icon">📅</span>
-                <div>
-                    <div class="info-label">Свободно</div>
-                    <div class="info-value">Июнь/Июль</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
 <!-- Преимущества (с якорем about) -->
 <section id="about">
     <div class="container">
         <h2>Вдохните атмосферу Должанки</h2>
         <div class="features-grid">
             <div class="feature-card">
-                <div class="feature-icon">🌊</div>
+                <div class="feature-icon">
+                    <!-- SVG Иконка моря -->
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 15H4C6 15 7 13 9 13C11 13 12 15 14 15C16 15 17 13 19 13C21 13 22 15 22 15H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2 18H4C6 18 7 16 9 16C11 16 12 18 14 18C16 18 17 16 19 16C21 16 22 18 22 18H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2 21H4C6 21 7 19 9 19C11 19 12 21 14 21C16 21 17 19 19 19C21 19 22 21 22 21H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 6V10M10 8H14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </div>
                 <h3>350 м до моря</h3>
                 <p>Тёплое Азовское море, знаменитая коса и ракушечный пляж — всё в шаговой доступности.</p>
             </div>
             <div class="feature-card">
-                <div class="feature-icon">🏠</div>
+                <div class="feature-icon">
+                    <!-- SVG Иконка дома -->
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 10L12 3L21 10V20H15V14H9V20H3V10Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
                 <h3>Дом с душой</h3>
                 <p>2 уютные спальни, гостиная с кухней, современный ремонт и домашняя обстановка.</p>
             </div>
             <div class="feature-card">
-                <div class="feature-icon">🍖</div>
+                <div class="feature-icon">
+                    <!-- SVG Иконка барбекю -->
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 9H17L16 13H8L7 9Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M7 13L8 21H16L17 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4 9H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M12 5V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M16 5L18 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M8 5L6 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </div>
                 <h3>Зона барбекю</h3>
                 <p>Беседка с мангалом, шампура, каза́н — всё для душевных вечеров под звёздами.</p>
             </div>
             <div class="feature-card">
-                <div class="feature-icon">🚙</div>
+                <div class="feature-icon">
+                    <!-- SVG Иконка парковки -->
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="4" y="6" width="16" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M8 12H16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <circle cx="8" cy="12" r="1.5" fill="currentColor"/>
+                        <circle cx="16" cy="12" r="1.5" fill="currentColor"/>
+                    </svg>
+                </div>
                 <h3>Закрытая парковка</h3>
                 <p>Ваш автомобиль в безопасности на охраняемой территории во дворе.</p>
             </div>
@@ -125,48 +123,14 @@
     </div>
 </section>
 
-<!-- Фотогалерея - Полностью автоматическая мозаика -->
+<!-- ========== УМНАЯ МОЗАИЧНАЯ ГАЛЕРЕЯ ========== -->
 <section id="gallery" class="gallery-section">
     <div class="container">
-        <h2>Как выглядит наш райский уголок</h2>
-        
-        <!-- Контейнер для автоматической галереи -->
-        <div class="auto-mosaic" id="autoMosaic">
-            <!-- Фото будут загружены автоматически через JS -->
-        </div>
-        
-        <!-- Кнопка "Показать ещё" (если фото много) -->
-        <div class="gallery-footer">
-            <button class="load-more-btn" id="loadMoreBtn" style="display: none;">Показать ещё фото</button>
-        </div>
+        <h2>Жильё и окрестности в фото</h2>
+        <!-- Контейнер, куда скрипт поместит галерею -->
+        <div class="mosaic-grid" id="dynamicMosaicGrid"></div>
     </div>
 </section>
-
-
-<!-- Расположение и контакты с картой -->
-<section id="contacts">
-    <div class="container">
-        <h2>Как добраться до нашего домика</h2>
-        <div class="contact-block">
-            <div class="contact-info">
-                <p>📍 <strong>Станица Должанская, ул. Колхозная, 46</strong> (район Должанской косы)</p>
-                <p>🚗 От Ейска — 35-40 минут. Можем встретить у магазина "Пятёрочка" и проводить.</p>
-                <p>📞 <a href="tel:+79998887766" class="phone">+7 (999) 888-77-66</a> — Инесса</p>
-                <p>📧 <a href="mailto:dom.dolzhanka@mail.ru" class="email">dom.dolzhanka@mail.ru</a></p>
-                <p>📱 WhatsApp / Telegram: +7 (999) 888-77-66</p>
-                <p style="font-size: 1rem; background: var(--sand-warm); padding: 10px; border-radius: 30px; color: var(--sea-deep);">🔔 Работаем с 2015 года, более 300 довольных семей</p>
-            </div>
-            
-            <!-- Контейнер для карты -->
-            <div class="map-real" style="position: relative; width: 100%; min-height: 400px;">
-                <!-- Скрипт конструктора ВНУТРИ блока -->
-                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A1a97cc18912791359f15bf15ddd1d55bd51676b02354a72e8100452af17d0df1&amp;width=100%25&amp;height=100%25&amp;lang=ru_RU&amp;scroll=true"></script>
-            </div>
-        </div>
-    </div>
-</section>
-
-
 
 <!-- Отзывы (с якорем reviews) -->
 <section id="reviews" class="reviews">
@@ -189,20 +153,60 @@
     </div>
 </section>
 
+<!-- Расположение и контакты с картой -->
+<section id="contacts">
+    <div class="container">
+        <h2>Как добраться до нашего домика</h2>
+        <div class="contact-block">
+            <div class="contact-info">
+                <p>📍 <strong>Ст. Должанская, ул. Колхозная, 46</strong></p>
+                <p>🚗 От Ейска — 35-40 минут.</p>
+                <p>📞 <a href="tel:+79998887766" class="phone">+7 (952) 869-31-08</a> — Инесса</p>
+                <p>📧 <a href="mailto:dom.dolzhanka@mail.ru" class="email">dom.dolzhanka@mail.ru</a></p>
+                <p style="font-size: 1rem; background: var(--sand-warm); padding: 10px; border-radius: 30px; color: var(--sea-deep);">🔔 Работаем с 2015 года, более 300 довольных семей</p>
+            </div>
+            
+            <!-- Контейнер для карты -->
+            <div class="map-real" style="position: relative; width: 100%; min-height: 400px;">
+                <!-- Скрипт конструктора ВНУТРИ блока -->
+                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A1a97cc18912791359f15bf15ddd1d55bd51676b02354a72e8100452af17d0df1&amp;width=100%25&amp;height=100%25&amp;lang=ru_RU&amp;scroll=true"></script>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Бронь (с якорем booking) -->
 <section id="booking" class="container">
     <div class="cta-section">
         <h3>Свободные даты в июне ещё есть!</h3>
         <p style="font-size: 1.3rem; margin-bottom: 20px;">Давайте забронируем — достаточно предоплаты 20%</p>
-        <a href="tel:+79998887766" class="cta-button">Позвонить сейчас</a>
-        <p style="margin-top: 30px; font-size: 1.1rem;">или напишите в удобный мессенджер: +7 (999) 888-77-66</p>
+        <a href="tel:+79528693108" class="cta-button">Позвонить сейчас</a>
+        
+        <!-- Новый блок с соцсетями (Max и Telegram) -->
+<div class="social-links">
+    <p style="margin: 30px 0 10px; font-size: 1.1rem;">или напишите в удобный мессенджер:</p>
+    <div class="social-icons">
+        <!-- Альтернативный вариант с использованием SVG файла -->
+<a href="#" target="_blank" class="social-icon max" title="Max">
+    <img src="icons/Max_logo.svg" alt="MAX" width="28" height="28" style="filter: brightness(0) invert(1);">
+</a>
+        <!-- Иконка Telegram (оставляем без изменений) -->
+        <a href="https://t.me/79528693108" target="_blank" class="social-icon telegram" title="Telegram">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22 5L2 11.5L9 13.5L19 7L12 16L16 21L22 5Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                <path d="M12 16L9 13.5L16 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
+    </div>
+    <p style="margin-top: 10px;">+7 (952) 869-31-08</p>
+</div>
     </div>
 </section>
 
 <!-- Футер с микроразметкой -->
 <footer>
     <div class="container">
-        <p>© Домик в Должанской, 2025 | Посуточно, без посредников, с любовью к гостям</p>
+        <p>© Домик в Должанской, 2026 | Посуточно, без посредников, с любовью к гостям</p>
         <p style="font-size: 0.9rem; opacity: 0.8;">Краснодарский край, Ейский район, станица Должанская</p>
         
         <!-- Schema.org микроразметка -->
@@ -218,8 +222,40 @@
     </div>
 </footer>
 
+<!-- Плавающая иконка в углу (умная - скрывается на hero и в booking) -->
+<div class="floating-corner" id="floatingCorner">
+    <a href="#booking" class="corner-button">
+        <div class="rotating-text-wrapper">
+            <svg class="corner-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 3L2 12H5V20H10V14H14V20H19V12H22L12 3Z" fill="currentColor"/>
+            </svg>
+            <svg class="rotating-circle-text" viewBox="0 0 100 100" width="80" height="80">
+                <defs>
+                    <path id="circlePath" d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none" />
+                </defs>
+                <text fill="currentColor" font-size="9.5" font-weight="600" letter-spacing="2">
+                    <textPath href="#circlePath" startOffset="0%">
+                        • НАПИШИ НАМ • НАПИШИ НАМ •
+                    </textPath>
+                </text>
+            </svg>
+        </div>
+    </a>
+</div>
+
+<!-- Лайтбокс (полноэкранная галерея) -->
+<div class="lightbox" id="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <span class="lightbox-prev">&#10094;</span>
+    <span class="lightbox-next">&#10095;</span>
+    <div class="lightbox-content">
+        <img src="" alt="" id="lightbox-img">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+</div>
+
 <script>
-    // Плавный скролл для якорей
+// Плавный скролл для якорей
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -241,71 +277,31 @@
         }
     });
 
-    // ========== АВТОМАТИЧЕСКАЯ ГАЛЕРЕЯ С ОПРЕДЕЛЕНИЕМ ОРИЕНТАЦИИ ==========
+    // ========== УМНАЯ МОЗАИЧНАЯ ГАЛЕРЕЯ С ЛАЙТБОКСОМ ==========
     document.addEventListener('DOMContentLoaded', function() {
-        // Массив с данными о фотографиях
+        // --- Данные о фотографиях ---
         const photos = [
-            {
-                src: 'img/photo_1_2026-03-09_16-52-27.jpg',
-                caption: '🌅 Фасад и уютный дворик'
-            },
-            {
-                src: 'img/photo_2_2026-03-09_16-52-27.jpg',
-                caption: '🛏️ Спальня в спокойных тонах'
-            },
-            {
-                src: 'img/photo_3_2026-03-09_16-52-27.jpg',
-                caption: '🍖 Зона барбекю с беседкой'
-            },
-            {
-                src: 'img/photo_4_2026-03-09_16-52-27.jpg',
-                caption: '🌊 Азовское море в двух шагах'
-            },
-            {
-                src: 'img/photo_5_2026-03-09_16-52-27.jpg',
-                caption: '🏡 Просторная гостиная'
-            },
-            {
-                src: 'img/photo_6_2026-03-09_16-52-27.jpg',
-                caption: '🌅 Вечерняя Должанская'
-            },
-            {
-                src: 'img/photo_7_2026-03-09_16-52-27.jpg',
-                caption: '🧸 Детский уголок во дворе'
-            },
-            {
-                src: 'img/photo_8_2026-03-09_16-52-27.jpg',
-                caption: '✨ Знаменитая Должанская коса'
-            }
+            { src: 'img/photo_1_2026-03-09_16-52-27.jpg', alt: 'Спальня с мягким светом и деревянной кроватью' },
+            { src: 'img/photo_2_2026-03-09_16-52-27.jpg', alt: 'Вторая спальня с уютным текстилем' },
+            { src: 'img/photo_3_2026-03-09_16-52-27.jpg', alt: 'Просторная гостиная с диваном и телевизором' },
+            { src: 'img/photo_4_2026-03-09_16-52-27.jpg', alt: 'Современная ванная комната с душевой кабиной' },
+            { src: 'img/photo_5_2026-03-09_16-52-27.jpg', alt: 'Чистота и комфорт в ванной' },
+            { src: 'img/photo_6_2026-03-09_16-52-27.jpg', alt: 'Уютный фасад дома с зелёным двориком' },
+            { src: 'img/photo_7_2026-03-09_16-52-27.jpg', alt: 'Обеденная зона на кухне' },
+            { src: 'img/photo_8_2026-03-09_16-52-27.jpg', alt: 'Кухня со всей необходимой техникой' }
         ];
 
-        // Текстовые блоки для вставки
-        const textBlocks = [
-            {
-                icon: '🏡',
-                title: 'Отдых без суеты',
-                text: 'Тихий район, никаких шумных баз отдыха — только вы и море.'
-            },
-            {
-                icon: '📸',
-                title: 'Ваши фото будут еще лучше',
-                text: 'Приезжайте и делайте сотни снимков на память!',
-                accent: true
-            },
-            {
-                icon: '🌊',
-                title: 'Море в 350 метрах',
-                text: 'Тёплое Азовское море и знаменитая коса ждут вас!'
-            },
-            {
-                icon: '🍖',
-                title: 'Вечера у мангала',
-                text: 'Беседка, шампура и каза́н для душевных посиделок'
-            }
+        // --- Текстовые плашки (будут заполнять пустоты) ---
+        const infoBlocks = [
+            { icon: '🏡', title: 'Ваш дом вдали от дома', text: 'Продумано до мелочей для вашего комфорта.' },
+            { icon: '🌅', title: 'Ловите рассветы', text: 'До морской косы всего 1 километр.' },
+            { icon: '🍉', title: 'Отдых для всей семьи', text: 'Много места для любой компании.' },
+            { icon: '🔥', title: 'Вечерние посиделки', text: 'Мангал, беседка и тёплая атмосфера.' },
+            { icon: '🌊', title: 'Азовское море', text: 'Мелкое и тёплое — идеально для детей.' }
         ];
 
-        const container = document.getElementById('autoMosaic');
-        if (!container) return;
+        const gridContainer = document.getElementById('dynamicMosaicGrid');
+        if (!gridContainer) return;
 
         // Функция для определения ориентации изображения
         function getImageOrientation(src) {
@@ -313,96 +309,308 @@
                 const img = new Image();
                 img.onload = function() {
                     const ratio = this.width / this.height;
-                    if (ratio > 1.3) {
+                    if (ratio > 1.2) { // Горизонтальное
                         resolve('landscape');
-                    } else if (ratio < 0.8) {
+                    } else if (ratio < 0.8) { // Вертикальное
                         resolve('portrait');
-                    } else {
+                    } else { // Квадратное или близко к тому
                         resolve('square');
                     }
                 };
                 img.onerror = function() {
-                    resolve('landscape');
+                    resolve('landscape'); // По умолчанию
                 };
                 img.src = src;
             });
         }
 
-        // Функция для получения CSS класса на основе ориентации
-        function getSizeClass(orientation) {
+        // Функция для получения размера элемента в ячейках сетки
+        function getItemSpan(orientation) {
             switch(orientation) {
-                case 'landscape':
-                    return Math.random() > 0.7 ? 'wide' : '';
-                case 'portrait':
-                    return 'tall';
-                case 'square':
-                    return Math.random() > 0.8 ? 'big' : '';
-                default:
-                    return '';
+                case 'landscape': return { col: 2, row: 1 }; // Широкие
+                case 'portrait': return { col: 1, row: 2 };  // Высокие
+                default: return { col: 1, row: 1 };          // Квадратные
             }
+        }
+
+        // Функция для перемешивания массива (рандомизация)
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
         }
 
         // Основная функция построения галереи
-        async function buildGallery() {
-            container.innerHTML = '';
-            
-            let textBlockIndex = 0;
-            
-            for (let i = 0; i < photos.length; i++) {
-                const photo = photos[i];
+        async function buildMosaic() {
+            gridContainer.innerHTML = ''; // Очищаем контейнер
+
+            // 1. Получаем данные обо всех фото с их ориентацией
+            let photoItems = await Promise.all(photos.map(async (photo, index) => {
                 const orientation = await getImageOrientation(photo.src);
-                const sizeClass = getSizeClass(orientation);
-                
-                const item = document.createElement('div');
-                item.className = `mosaic-item ${sizeClass}`;
-                item.style.animationDelay = `${0.1 + i * 0.05}s`;
-                
-                item.innerHTML = `
-                    <img src="${photo.src}" alt="${photo.caption}" loading="lazy">
-                    <div class="mosaic-caption">${photo.caption}</div>
-                `;
-                
-                container.appendChild(item);
-                
-                if ((i + 1) % 3 === 0 && textBlockIndex < textBlocks.length) {
-                    const block = textBlocks[textBlockIndex];
-                    const textItem = document.createElement('div');
-                    textItem.className = `mosaic-item text-block ${block.accent ? 'accent' : ''}`;
-                    textItem.style.animationDelay = `${0.1 + (i + 0.5) * 0.05}s`;
+                return {
+                    type: 'photo',
+                    src: photo.src,
+                    alt: photo.alt,
+                    orientation: orientation,
+                    span: getItemSpan(orientation),
+                    originalIndex: index // Сохраняем оригинальный индекс для лайтбокса
+                };
+            }));
+
+            // 2. Перемешиваем фото для разнообразия
+            photoItems = shuffleArray(photoItems);
+            
+            // 3. Перемешиваем плашки
+            let shuffledInfoBlocks = shuffleArray([...infoBlocks]);
+
+            // 4. Создаем двумерный массив для отслеживания занятых ячеек (3 колонки)
+            const gridCols = 3;
+            let gridMatrix = [];
+            let currentRow = 0;
+            
+            // Функция для поиска свободного места под элемент
+            function findFreeSpot(spanCols, spanRows) {
+                for (let r = 0; r <= currentRow + 2; r++) {
+                    // Если ряд не существует, создаем его
+                    if (!gridMatrix[r]) gridMatrix[r] = new Array(gridCols).fill(false);
                     
-                    textItem.innerHTML = `
-                        <div class="text-block-content">
-                            <span class="text-block-icon">${block.icon}</span>
-                            <h3>${block.title}</h3>
-                            <p>${block.text}</p>
-                        </div>
-                    `;
-                    
-                    container.appendChild(textItem);
-                    textBlockIndex++;
+                    for (let c = 0; c <= gridCols - spanCols; c++) {
+                        // Проверяем, свободны ли все ячейки, которые нужны
+                        let free = true;
+                        for (let dr = 0; dr < spanRows; dr++) {
+                            for (let dc = 0; dc < spanCols; dc++) {
+                                if (!gridMatrix[r + dr]) gridMatrix[r + dr] = new Array(gridCols).fill(false);
+                                if (gridMatrix[r + dr][c + dc]) {
+                                    free = false;
+                                    break;
+                                }
+                            }
+                            if (!free) break;
+                        }
+                        
+                        if (free) {
+                            return { row: r, col: c };
+                        }
+                    }
+                }
+                // Если не нашли, добавляем новый ряд
+                const newRow = gridMatrix.length;
+                if (!gridMatrix[newRow]) gridMatrix[newRow] = new Array(gridCols).fill(false);
+                return { row: newRow, col: 0 };
+            }
+
+            // 5. Расставляем все фото
+            for (const photo of photoItems) {
+                const spot = findFreeSpot(photo.span.col, photo.span.row);
+                
+                // Помечаем ячейки как занятые
+                for (let dr = 0; dr < photo.span.row; dr++) {
+                    for (let dc = 0; dc < photo.span.col; dc++) {
+                        if (!gridMatrix[spot.row + dr]) 
+                            gridMatrix[spot.row + dr] = new Array(gridCols).fill(false);
+                        gridMatrix[spot.row + dr][spot.col + dc] = 'photo';
+                    }
+                }
+                
+                // Сохраняем позицию фото для последующей отрисовки
+                photo.row = spot.row;
+                photo.col = spot.col;
+                
+                if (spot.row + photo.span.row - 1 > currentRow) {
+                    currentRow = spot.row + photo.span.row - 1;
                 }
             }
+
+            // 6. Ищем пустые ячейки и заполняем их плашками
+            let infoIndex = 0;
+            for (let r = 0; r <= currentRow; r++) {
+                for (let c = 0; c < gridCols; c++) {
+                    // Если ячейка пуста и у нас еще есть плашки
+                    if (!gridMatrix[r]?.[c] && infoIndex < shuffledInfoBlocks.length) {
+                        // Проверяем, можем ли мы поставить сюда плашку 1x1
+                        let canPlace = true;
+                        for (let dr = 0; dr < 1; dr++) {
+                            for (let dc = 0; dc < 1; dc++) {
+                                if (gridMatrix[r + dr]?.[c + dc]) {
+                                    canPlace = false;
+                                    break;
+                                }
+                            }
+                        }
+                        
+                        if (canPlace) {
+                            // Помечаем ячейку
+                            if (!gridMatrix[r]) gridMatrix[r] = new Array(gridCols).fill(false);
+                            gridMatrix[r][c] = 'info';
+                            
+                            // Сохраняем позицию плашки
+                            if (!shuffledInfoBlocks[infoIndex].placed) {
+                                shuffledInfoBlocks[infoIndex].row = r;
+                                shuffledInfoBlocks[infoIndex].col = c;
+                                shuffledInfoBlocks[infoIndex].placed = true;
+                                infoIndex++;
+                            }
+                        }
+                    }
+                }
+            }
+
+            // 7. Собираем все элементы для отрисовки
+            const allItems = [...photoItems];
             
-            while (textBlockIndex < textBlocks.length) {
-                const block = textBlocks[textBlockIndex];
-                const textItem = document.createElement('div');
-                textItem.className = `mosaic-item text-block ${block.accent ? 'accent' : ''}`;
+            // Добавляем плашки, которые нашли место
+            shuffledInfoBlocks.forEach((block, index) => {
+                if (block.placed) {
+                    allItems.push({
+                        type: 'info',
+                        data: block,
+                        row: block.row,
+                        col: block.col,
+                        span: { col: 1, row: 1 }
+                    });
+                }
+            });
+
+            // Сортируем все элементы по позиции (сверху вниз, слева направо)
+            allItems.sort((a, b) => {
+                if (a.row !== b.row) return a.row - b.row;
+                return a.col - b.col;
+            });
+
+            // 8. Отрисовываем элементы
+            for (const item of allItems) {
+                const element = document.createElement('div');
+                element.className = 'mosaic-item';
                 
-                textItem.innerHTML = `
-                    <div class="text-block-content">
-                        <span class="text-block-icon">${block.icon}</span>
-                        <h3>${block.title}</h3>
-                        <p>${block.text}</p>
-                    </div>
-                `;
-                
-                container.appendChild(textItem);
-                textBlockIndex++;
+                // Устанавливаем позицию в сетке
+                element.style.gridColumn = `${item.col + 1} / span ${item.span.col}`;
+                element.style.gridRow = `${item.row + 1} / span ${item.span.row}`;
+
+                if (item.type === 'photo') {
+                    element.innerHTML = `
+                        <img src="${item.src}" alt="${item.alt}" loading="lazy" data-index="${item.originalIndex}">
+                        <div class="mosaic-caption">${item.alt}</div>
+                    `;
+                    
+                    // Добавляем обработчик клика для открытия лайтбокса
+                    const img = element.querySelector('img');
+                    img.addEventListener('click', function() {
+                        openLightbox(item.originalIndex);
+                    });
+                } else {
+                    element.classList.add('mosaic-info-block');
+                    element.innerHTML = `
+                        <div class="info-content">
+                            <span class="info-icon">${item.data.icon}</span>
+                            <h3>${item.data.title}</h3>
+                            <p>${item.data.text}</p>
+                        </div>
+                    `;
+                }
+                gridContainer.appendChild(element);
             }
         }
 
-        buildGallery();
+        // ========== ЛАЙТБОКС (ПОЛНОЭКРАННАЯ ГАЛЕРЕЯ) ==========
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxCaption = document.getElementById('lightbox-caption');
+        const lightboxClose = document.querySelector('.lightbox-close');
+        const lightboxPrev = document.querySelector('.lightbox-prev');
+        const lightboxNext = document.querySelector('.lightbox-next');
+        
+        let currentImageIndex = 0;
+
+        // Функция открытия лайтбокса
+        function openLightbox(index) {
+            currentImageIndex = index;
+            updateLightboxImage();
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Запрещаем скролл страницы
+        }
+
+        // Функция закрытия лайтбокса
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = ''; // Возвращаем скролл
+        }
+
+        // Функция обновления изображения в лайтбоксе
+        function updateLightboxImage() {
+            const photo = photos[currentImageIndex];
+            lightboxImg.src = photo.src;
+            lightboxImg.alt = photo.alt;
+            lightboxCaption.textContent = photo.alt;
+        }
+
+        // Переключение на предыдущее фото
+        function prevImage() {
+            currentImageIndex = (currentImageIndex - 1 + photos.length) % photos.length;
+            updateLightboxImage();
+        }
+
+        // Переключение на следующее фото
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % photos.length;
+            updateLightboxImage();
+        }
+
+        // Обработчики событий для лайтбокса
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightboxPrev.addEventListener('click', prevImage);
+        lightboxNext.addEventListener('click', nextImage);
+
+        // Закрытие по клику на фон
+        lightbox.addEventListener('click', function(e) {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        // Навигация клавишами
+        document.addEventListener('keydown', function(e) {
+            if (!lightbox.classList.contains('active')) return;
+            
+            if (e.key === 'Escape') {
+                closeLightbox();
+            } else if (e.key === 'ArrowLeft') {
+                prevImage();
+            } else if (e.key === 'ArrowRight') {
+                nextImage();
+            }
+        });
+
+        // Запускаем строительство галереи
+        buildMosaic();
     });
+
+// Умная плавающая кнопка - скрывается на hero и в booking
+const floatingCorner = document.getElementById('floatingCorner');
+const heroSection = document.getElementById('hero');
+const bookingSection = document.getElementById('booking');
+
+function checkFloatingCornerVisibility() {
+    if (!floatingCorner) return;
+    
+    const scrollY = window.scrollY;
+    const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+    const bookingTop = bookingSection.offsetTop;
+    const bookingBottom = bookingSection.offsetTop + bookingSection.offsetHeight;
+    
+    // Показываем кнопку только если мы не на hero и не в секции booking
+    if (scrollY < heroBottom - 100 || (scrollY + 100 > bookingTop && scrollY - 100 < bookingBottom)) {
+        floatingCorner.classList.add('hidden');
+    } else {
+        floatingCorner.classList.remove('hidden');
+    }
+}
+
+// Добавляем обработчик скролла
+window.addEventListener('scroll', checkFloatingCornerVisibility);
+// Проверяем при загрузке
+document.addEventListener('DOMContentLoaded', checkFloatingCornerVisibility);
 </script>
 
 </body>
