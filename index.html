@@ -27,7 +27,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    Verification: 3bd09b90cf29c0fc
 
 <!-- 🧭 Плавающая навигация (появляется при скролле) -->
 <nav class="floating-nav" id="floatingNav">
@@ -126,98 +125,23 @@
     </div>
 </section>
 
-<!-- Фотогалерея - Умная карусель с авто-слайдшоу -->
+<!-- Фотогалерея - Полностью автоматическая мозаика -->
 <section id="gallery" class="gallery-section">
     <div class="container">
         <h2>Как выглядит наш райский уголок</h2>
         
-        <!-- Основная карусель -->
-        <div class="carousel-container">
-            <div class="carousel-main">
-                <div class="carousel-track" id="carouselTrack">
-                    <div class="carousel-slide">
-                        <img src="img/photo_1_2026-03-09_16-52-27.jpg" alt="Фасад дома у моря" loading="lazy">
-                        <div class="slide-caption">🌅 Фасад и уютный дворик</div>
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="img/photo_2_2026-03-09_16-52-27.jpg" alt="Уютная спальня" loading="lazy">
-                        <div class="slide-caption">🛏️ Спальня в спокойных тонах</div>
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="img/photo_3_2026-03-09_16-52-27.jpg" alt="Мангальная зона" loading="lazy">
-                        <div class="slide-caption">🍖 Зона барбекю с беседкой</div>
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="img/photo_4_2026-03-09_16-52-27.jpg" alt="Море рядом" loading="lazy">
-                        <div class="slide-caption">🌊 Азовское море в двух шагах</div>
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="img/photo_5_2026-03-09_16-52-27.jpg" alt="Гостиная с кухней" loading="lazy">
-                        <div class="slide-caption">🏡 Просторная гостиная</div>
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="img/photo_6_2026-03-09_16-52-27.jpg" alt="Вид на станицу" loading="lazy">
-                        <div class="slide-caption">🌅 Вечерняя Должанская</div>
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="img/photo_7_2026-03-09_16-52-27.jpg" alt="Детская площадка" loading="lazy">
-                        <div class="slide-caption">🧸 Детский уголок во дворе</div>
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="img/photo_8_2026-03-09_16-52-27.jpg" alt="Закат на косе" loading="lazy">
-                        <div class="slide-caption">✨ Знаменитая Должанская коса</div>
-                    </div>
-                </div>
-                
-                <!-- Кнопки навигации -->
-                <button class="carousel-btn prev" id="prevBtn" aria-label="Предыдущее фото">←</button>
-                <button class="carousel-btn next" id="nextBtn" aria-label="Следующее фото">→</button>
-                
-                <!-- Индикатор автопрокрутки -->
-                <div class="autoplay-indicator" id="autoplayIndicator">
-                    <div class="pulse-dot"></div>
-                    <span>авто</span>
-                </div>
-            </div>
-            
-            <!-- Прогресс-бар -->
-            <div class="carousel-progress">
-                <div class="progress-bar" id="progressBar"></div>
-            </div>
-            
-            <!-- Миниатюры -->
-            <div class="thumbnails" id="thumbnails">
-                <div class="thumbnail" data-index="0">
-                    <img src="img/photo_1_2026-03-09_16-52-27.jpg" alt="Фасад">
-                </div>
-                <div class="thumbnail" data-index="1">
-                    <img src="img/photo_2_2026-03-09_16-52-27.jpg" alt="Спальня">
-                </div>
-                <div class="thumbnail" data-index="2">
-                    <img src="img/photo_3_2026-03-09_16-52-27.jpg" alt="Мангал">
-                </div>
-                <div class="thumbnail" data-index="3">
-                    <img src="img/photo_4_2026-03-09_16-52-27.jpg" alt="Море">
-                </div>
-                <div class="thumbnail" data-index="4">
-                    <img src="img/photo_5_2026-03-09_16-52-27.jpg" alt="Гостиная">
-                </div>
-                <div class="thumbnail" data-index="5">
-                    <img src="img/photo_6_2026-03-09_16-52-27.jpg" alt="Вид">
-                </div>
-                <div class="thumbnail" data-index="6">
-                    <img src="img/photo_7_2026-03-09_16-52-27.jpg" alt="Детская">
-                </div>
-                <div class="thumbnail" data-index="7">
-                    <img src="img/photo_8_2026-03-09_16-52-27.jpg" alt="Коса">
-                </div>
-            </div>
-            
-            <!-- Счетчик фото -->
-            <div class="photo-counter" id="photoCounter">1 / 8</div>
+        <!-- Контейнер для автоматической галереи -->
+        <div class="auto-mosaic" id="autoMosaic">
+            <!-- Фото будут загружены автоматически через JS -->
+        </div>
+        
+        <!-- Кнопка "Показать ещё" (если фото много) -->
+        <div class="gallery-footer">
+            <button class="load-more-btn" id="loadMoreBtn" style="display: none;">Показать ещё фото</button>
         </div>
     </div>
 </section>
+
 
 <!-- Расположение и контакты с картой -->
 <section id="contacts">
@@ -324,166 +248,193 @@
         lastScroll = currentScroll;
     });
 </script>
-
-<!-- Скрипты для умной галереи -->
 <script>
-    // Галерея с умным авто-слайдшоу
-    const track = document.getElementById('carouselTrack');
-    const slides = document.querySelectorAll('.carousel-slide');
-    const thumbnails = document.querySelectorAll('.thumbnail');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-    const progressBar = document.getElementById('progressBar');
-    const photoCounter = document.getElementById('photoCounter');
-    const autoplayIndicator = document.getElementById('autoplayIndicator');
-    
-    let currentIndex = 0;
-    let autoplayInterval = null;
-    let isAutoplayActive = true;
-    let inactivityTimer = null;
-    const AUTOPLAY_DELAY = 4000; // 4 секунды между слайдами
-    const INACTIVITY_TIMEOUT = 5000; // 5 секунд бездействия
-    
-    // Обновление позиции карусели
-    function updateCarousel(index, userAction = false) {
-        // Зацикливание
-        if (index < 0) index = slides.length - 1;
-        if (index >= slides.length) index = 0;
-        
-        // Движение трека
-        track.style.transform = `translateX(-${index * 100}%)`;
-        
-        // Обновление активного thumbnail
-        thumbnails.forEach((thumb, i) => {
-            if (i === index) {
-                thumb.classList.add('active');
-            } else {
-                thumb.classList.remove('active');
+ // ========== АВТОМАТИЧЕСКАЯ ГАЛЕРЕЯ С ОПРЕДЕЛЕНИЕМ ОРИЕНТАЦИИ ==========
+    document.addEventListener('DOMContentLoaded', function() {
+        // Массив с данными о фотографиях
+        const photos = [
+            {
+                src: 'img/photo_1_2026-03-09_16-52-27.jpg',
+                caption: '🌅 Фасад и уютный дворик',
+                orientation: 'landscape' // можно указать вручную, но мы будем определять автоматически
+            },
+            {
+                src: 'img/photo_2_2026-03-09_16-52-27.jpg',
+                caption: '🛏️ Спальня в спокойных тонах'
+            },
+            {
+                src: 'img/photo_3_2026-03-09_16-52-27.jpg',
+                caption: '🍖 Зона барбекю с беседкой'
+            },
+            {
+                src: 'img/photo_4_2026-03-09_16-52-27.jpg',
+                caption: '🌊 Азовское море в двух шагах'
+            },
+            {
+                src: 'img/photo_5_2026-03-09_16-52-27.jpg',
+                caption: '🏡 Просторная гостиная'
+            },
+            {
+                src: 'img/photo_6_2026-03-09_16-52-27.jpg',
+                caption: '🌅 Вечерняя Должанская'
+            },
+            {
+                src: 'img/photo_7_2026-03-09_16-52-27.jpg',
+                caption: '🧸 Детский уголок во дворе'
+            },
+            {
+                src: 'img/photo_8_2026-03-09_16-52-27.jpg',
+                caption: '✨ Знаменитая Должанская коса'
             }
-        });
-        
-        // Обновление прогресс бара
-        const progress = ((index + 1) / slides.length) * 100;
-        progressBar.style.width = `${progress}%`;
-        
-        // Обновление счетчика
-        photoCounter.textContent = `${index + 1} / ${slides.length}`;
-        
-        currentIndex = index;
-        
-        // Если действие вызвано пользователем, останавливаем автопрокрутку
-        if (userAction) {
-            pauseAutoplay();
-            resetInactivityTimer();
+        ];
+
+        // Текстовые блоки для вставки
+        const textBlocks = [
+            {
+                icon: '🏡',
+                title: 'Отдых без суеты',
+                text: 'Тихий район, никаких шумных баз отдыха — только вы и море.'
+            },
+            {
+                icon: '📸',
+                title: 'Ваши фото будут еще лучше',
+                text: 'Приезжайте и делайте сотни снимков на память!',
+                accent: true
+            },
+            {
+                icon: '🌊',
+                title: 'Море в 350 метрах',
+                text: 'Тёплое Азовское море и знаменитая коса ждут вас!'
+            },
+            {
+                icon: '🍖',
+                title: 'Вечера у мангала',
+                text: 'Беседка, шампура и каза́н для душевных посиделок'
+            }
+        ];
+
+        const container = document.getElementById('autoMosaic');
+        if (!container) return;
+
+        // Функция для определения ориентации изображения
+        function getImageOrientation(src) {
+            return new Promise((resolve) => {
+                const img = new Image();
+                img.onload = function() {
+                    // Определяем ориентацию по соотношению сторон
+                    const ratio = this.width / this.height;
+                    if (ratio > 1.3) {
+                        resolve('landscape'); // Горизонтальное (широкое)
+                    } else if (ratio < 0.8) {
+                        resolve('portrait'); // Вертикальное (высокое)
+                    } else {
+                        resolve('square'); // Квадратное или близкое к квадрату
+                    }
+                };
+                img.onerror = function() {
+                    // Если ошибка загрузки, считаем горизонтальным по умолчанию
+                    resolve('landscape');
+                };
+                img.src = src;
+            });
         }
-    }
-    
-    // Следующий слайд
-    function nextSlide(userAction = false) {
-        updateCarousel(currentIndex + 1, userAction);
-    }
-    
-    // Предыдущий слайд
-    function prevSlide(userAction = false) {
-        updateCarousel(currentIndex - 1, userAction);
-    }
-    
-    // Запуск автопрокрутки
-    function startAutoplay() {
-        if (autoplayInterval) clearInterval(autoplayInterval);
-        autoplayInterval = setInterval(() => {
-            nextSlide(false);
-        }, AUTOPLAY_DELAY);
-        isAutoplayActive = true;
-        
-        // Обновляем индикатор
-        autoplayIndicator.classList.remove('paused');
-        autoplayIndicator.innerHTML = '<div class="pulse-dot"></div><span>авто</span>';
-    }
-    
-    // Пауза автопрокрутки
-    function pauseAutoplay() {
-        if (autoplayInterval) {
-            clearInterval(autoplayInterval);
-            autoplayInterval = null;
+
+        // Функция для получения CSS класса на основе ориентации
+        function getSizeClass(orientation, index) {
+            // Можно добавить случайные вариации для интереса
+            switch(orientation) {
+                case 'landscape':
+                    // Иногда делаем горизонтальные фото широкими (случайно)
+                    return (Math.random() > 0.7) ? 'wide' : '';
+                case 'portrait':
+                    // Вертикальные фото делаем высокими
+                    return 'tall';
+                case 'square':
+                    // Квадратные иногда делаем большими
+                    return (Math.random() > 0.8) ? 'big' : '';
+                default:
+                    return '';
+            }
         }
-        isAutoplayActive = false;
-        
-        // Обновляем индикатор
-        autoplayIndicator.classList.add('paused');
-        autoplayIndicator.innerHTML = '<div class="pulse-dot" style="background: var(--stone-blue); animation: none;"></div><span>пауза</span>';
-    }
-    
-    // Сброс таймера бездействия
-    function resetInactivityTimer() {
-        if (inactivityTimer) clearTimeout(inactivityTimer);
-        
-        // Если автопрокрутка не активна, запускаем таймер для её возобновления
-        if (!isAutoplayActive) {
-            inactivityTimer = setTimeout(() => {
-                startAutoplay();
-            }, INACTIVITY_TIMEOUT);
+
+        // Основная функция построения галереи
+        async function buildGallery() {
+            container.innerHTML = ''; // Очищаем контейнер
+            
+            let textBlockIndex = 0;
+            
+            // Обрабатываем каждое фото
+            for (let i = 0; i < photos.length; i++) {
+                const photo = photos[i];
+                
+                // Определяем ориентацию (если не указана вручную)
+                let orientation = photo.orientation;
+                if (!orientation) {
+                    orientation = await getImageOrientation(photo.src);
+                }
+                
+                // Получаем класс для сетки
+                const sizeClass = getSizeClass(orientation, i);
+                
+                // Создаем элемент фото
+                const item = document.createElement('div');
+                item.className = `mosaic-item ${sizeClass}`;
+                item.style.animationDelay = `${0.1 + i * 0.05}s`;
+                
+                item.innerHTML = `
+                    <img src="${photo.src}" alt="${photo.caption}" loading="lazy">
+                    <div class="mosaic-caption">${photo.caption}</div>
+                `;
+                
+                container.appendChild(item);
+                
+                // Вставляем текстовый блок после каждого 3-го фото
+                if ((i + 1) % 3 === 0 && textBlockIndex < textBlocks.length) {
+                    const block = textBlocks[textBlockIndex];
+                    const textItem = document.createElement('div');
+                    textItem.className = `mosaic-item text-block ${block.accent ? 'accent' : ''}`;
+                    textItem.style.animationDelay = `${0.1 + (i + 0.5) * 0.05}s`;
+                    
+                    textItem.innerHTML = `
+                        <div class="text-block-content">
+                            <span class="text-block-icon">${block.icon}</span>
+                            <h3>${block.title}</h3>
+                            <p>${block.text}</p>
+                        </div>
+                    `;
+                    
+                    container.appendChild(textItem);
+                    textBlockIndex++;
+                }
+            }
+            
+            // Если остались текстовые блоки, добавляем их в конец
+            while (textBlockIndex < textBlocks.length) {
+                const block = textBlocks[textBlockIndex];
+                const textItem = document.createElement('div');
+                textItem.className = `mosaic-item text-block ${block.accent ? 'accent' : ''}`;
+                
+                textItem.innerHTML = `
+                    <div class="text-block-content">
+                        <span class="text-block-icon">${block.icon}</span>
+                        <h3>${block.title}</h3>
+                        <p>${block.text}</p>
+                    </div>
+                `;
+                
+                container.appendChild(textItem);
+                textBlockIndex++;
+            }
         }
-    }
-    
-    // Обработчики событий
-    prevBtn.addEventListener('click', () => {
-        prevSlide(true);
-    });
-    
-    nextBtn.addEventListener('click', () => {
-        nextSlide(true);
-    });
-    
-    thumbnails.forEach(thumb => {
-        thumb.addEventListener('click', () => {
-            const index = parseInt(thumb.dataset.index);
-            updateCarousel(index, true);
-        });
-    });
-    
-    // Клавиатурная навигация
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowLeft') {
-            prevSlide(true);
-        } else if (e.key === 'ArrowRight') {
-            nextSlide(true);
-        }
-    });
-    
-    // Touch-события для мобильных
-    let touchStartX = 0;
-    let touchEndX = 0;
-    
-    track.addEventListener('touchstart', (e) => {
-        touchStartX = e.changedTouches[0].screenX;
-    });
-    
-    track.addEventListener('touchend', (e) => {
-        touchEndX = e.changedTouches[0].screenX;
-        if (touchEndX < touchStartX - 50) {
-            nextSlide(true);
-        } else if (touchEndX > touchStartX + 50) {
-            prevSlide(true);
-        }
-    });
-    
-    // Мышь тоже считаем действием
-    track.addEventListener('mouseenter', () => {
-        // Не останавливаем автопрокрутку, просто сбрасываем таймер
-        if (!isAutoplayActive) {
-            resetInactivityTimer();
-        }
-    });
-    
-    // Инициализация - запускаем автопрокрутку
-    updateCarousel(0, false);
-    startAutoplay();
-    
-    // Очистка при уходе со страницы
-    window.addEventListener('beforeunload', () => {
-        if (autoplayInterval) clearInterval(autoplayInterval);
-        if (inactivityTimer) clearTimeout(inactivityTimer);
+
+        // Запускаем построение галереи
+        buildGallery();
+
+        // Функция для добавления новых фото (если нужно будет)
+        window.addPhotosToGallery = function(newPhotos) {
+            photos.push(...newPhotos);
+            buildGallery(); // Перестраиваем галерею
+        };
     });
 </script>
 
