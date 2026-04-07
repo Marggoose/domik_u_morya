@@ -2,49 +2,76 @@
 <html lang="ru">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Основные SEO мета-теги -->
     <title>Домик у моря в Должанской | Посуточно, уютно, рядом с морем</title>
-    <meta name="description" content="Снимите уютный домик в станице Должанской рядом с морем. Идеально для отдыха семьей или компанией.">
-    <meta name="keywords" content="домик в должанской посуточно, снять жилье в должанской, отдых на азовском море">
+    <meta name="description" content="Снимите уютный домик в станице Должанской рядом с морем. Идеально для отдыха семьей или компанией. Живописные косы, теплое море и домашний комфорт.">
+    <meta name="keywords" content="домик в должанской посуточно, снять жилье в должанской, отдых на азовском море, должанка домик у моря, база отдыха должанская">
     <meta name="author" content="Частный сектор в Должанской">
     <meta name="robots" content="index, follow">
+
+    <!-- Open Graph мета-теги для соцсетей -->
     <meta property="og:title" content="Домик у моря в станице Должанской">
-    <meta property="og:description" content="Уютное размещение в 15 минутах от моря.">
-    <meta property="og:image" content="img/photo_6_2026-03-09_16-52-27.jpg">
+    <meta property="og:description" content="Уютное размещение в 15 минутах от моря. Тихое место, все удобства, мангал и парковка.">
+    <meta property="og:image" content="https://marggoose.github.io/domik_u_morya/img/photo_6_2026-03-09_16-52-27.jpg">
+    <meta property="og:url" content="https://marggoose.github.io/domik_u_morya/">
     <meta property="og:type" content="website">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%238e9639'%3E%3Cpath d='M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z'/%3E%3C/svg%3E">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta property="og:locale" content="ru_RU">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%238e9639'%3E%3Cpath d='M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z'/%3E%3C/svg%3E">
+
+    <!-- Подключаем внешний CSS файл -->
     <link rel="stylesheet" href="style.css">
+    <!-- Подключаем шрифт -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
+<!-- Оверлей для мобильного меню (добавлен) -->
+<div class="menu-overlay" id="menuOverlay"></div>
+
+<!-- 🧭 Плавающая навигация (появляется при скролле) -->
 <nav class="floating-nav" id="floatingNav">
     <div class="nav-container">
         <div class="nav-logo">
-            <svg class="logo-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <!-- SVG Иконка домика -->
+            <svg class="logo-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Иконка домика">
                 <path d="M12 3L2 12H5V20H10V14H14V20H19V12H22L12 3Z" fill="currentColor"/>
             </svg>
             <span>Домик в Должанской</span>
         </div>
-        <div class="menu-overlay" id="menuOverlay"></div>
-        <button class="mobile-menu-toggle" id="mobileMenuToggle">
-            <div class="hamburger-icon"><span></span><span></span><span></span></div>
-        </button>
-        <div class="nav-links" id="navLinks">
+        <div class="nav-links">
             <a href="#about">О доме</a>
             <a href="#gallery">Галерея</a>
             <a href="#reviews">Отзывы</a>
             <a href="#contacts">Контакты</a>
             <a href="#booking" class="nav-cta">Забронировать</a>
         </div>
+        <div class="burger" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#about">О доме</a>
+            <a href="#gallery">Галерея</a>
+            <a href="#reviews">Отзывы</a>
+            <a href="#contacts">Контакты</a>
+            <a href="#booking" class="mobile-cta">Забронировать</a>
+        </div>
     </div>
 </nav>
 
+<!-- 🌅 Первый экран с фотографией -->
 <section class="hero" id="hero" style="background-image: linear-gradient(90deg, rgba(25, 81, 154, 0.9) 0%, rgba(25, 81, 154, 0.4) 50%, transparent 80%), url('img/photo_6_2026-03-09_16-52-27.jpg');">
     <div class="hero-content">
         <span class="hero-badge">Отдых у Азовского моря</span>
         <h1>Домик у моря <br>в станице Должанской</h1>
         <p class="hero-description">Рассветы над морем, уют в каждой детали и тепло южного гостеприимства</p>
+        
+        <!-- Якорные ссылки в hero -->
         <div class="hero-links">
             <a href="#about" class="hero-link">Узнать больше ↓</a>
             <a href="#booking" class="hero-link primary">Забронировать</a>
@@ -52,36 +79,97 @@
     </div>
 </section>
 
+<!-- Преимущества (с якорем about) -->
 <section id="about">
     <div class="container">
         <h2>Вдохните атмосферу Должанки</h2>
-        <div class="features-grid" id="featuresGrid">
-            <div class="feature-card"><div class="feature-icon"><img src="data:image/png;base64,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" alt="island"></div><h3>350 м до моря</h3><p>Тёплое Азовское море, знаменитая коса и ракушечный пляж — всё в шаговой доступности.</p></div>
-            <div class="feature-card"><div class="feature-icon"><img src="data:image/png;base64,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" alt="house"></div><h3>Дом с душой</h3><p>2 уютные спальни, гостиная с кухней, современный ремонт и домашняя обстановка.</p></div>
-            <div class="feature-card"><div class="feature-icon"><img src="data:image/png;base64,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" alt="weber"></div><h3>Зона барбекю</h3><p>Беседка с мангалом, шампура, каза́н — всё для душевных вечеров под звёздами.</p></div>
-            <div class="feature-card"><div class="feature-icon"><img src="data:image/png;base64,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" alt="parking"></div><h3>Закрытая парковка</h3><p>Ваш автомобиль в безопасности на охраняемой территории во дворе.</p></div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <!-- SVG Иконка моря -->
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Иконка моря">
+                        <path d="M2 15H4C6 15 7 13 9 13C11 13 12 15 14 15C16 15 17 13 19 13C21 13 22 15 22 15H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2 18H4C6 18 7 16 9 16C11 16 12 18 14 18C16 18 17 16 19 16C21 16 22 18 22 18H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2 21H4C6 21 7 19 9 19C11 19 12 21 14 21C16 21 17 19 19 19C21 19 22 21 22 21H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 6V10M10 8H14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h3>350 м до моря</h3>
+                <p>Тёплое Азовское море, знаменитая коса и ракушечный пляж — всё в шаговой доступности.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <!-- SVG Иконка дома -->
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Иконка дома">
+                        <path d="M3 10L12 3L21 10V20H15V14H9V20H3V10Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h3>Дом с душой</h3>
+                <p>2 уютные спальни, гостиная с кухней, современный ремонт и домашняя обстановка.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <!-- SVG Иконка барбекю -->
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Иконка барбекю">
+                        <path d="M7 9H17L16 13H8L7 9Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M7 13L8 21H16L17 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4 9H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M12 5V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M16 5L18 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M8 5L6 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h3>Зона барбекю</h3>
+                <p>Беседка с мангалом, шампура, каза́н — всё для душевных вечеров под звёздами.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <!-- SVG Иконка парковки -->
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Иконка парковки">
+                        <rect x="4" y="6" width="16" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M8 12H16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <circle cx="8" cy="12" r="1.5" fill="currentColor"/>
+                        <circle cx="16" cy="12" r="1.5" fill="currentColor"/>
+                    </svg>
+                </div>
+                <h3>Закрытая парковка</h3>
+                <p>Ваш автомобиль в безопасности на охраняемой территории во дворе.</p>
+            </div>
         </div>
     </div>
 </section>
 
+<!-- ========== УМНАЯ МОЗАИЧНАЯ ГАЛЕРЕЯ ========== -->
 <section id="gallery" class="gallery-section">
     <div class="container">
         <h2>Жильё и окрестности в фото</h2>
+        <!-- Контейнер, куда скрипт поместит галерею -->
         <div class="mosaic-grid" id="dynamicMosaicGrid"></div>
     </div>
 </section>
 
+<!-- Отзывы (с якорем reviews) -->
 <section id="reviews" class="reviews">
     <div class="container">
         <h2>Что говорят гости</h2>
-        <div class="review-cards" id="reviewsGrid">
-            <div class="review-item"><p>«Всё понравилось! Домик чистый, уютный, кровать удобная. До моря реально близко, даже с маленьким ребёнком дошли без проблем. Во дворе мангал, посидели вечером. Спасибо!»</p><p class="author">— Ольга, г. Воронеж</p></div>
-            <div class="review-item"><p>«Отличный вариант для Должанки. Тихо, зелено, есть кондиционер (спасает в жару). Хозяйка приветливая, показала всё, рассказала про море и где вкусно поесть. Вернёмся!»</p><p class="author">— Игорь, г. Москва</p></div>
-            <div class="review-item"><p>«Снимали с друзьями на выходные. Дом большой, всем места хватило. Мангал, беседка, даже настольные игры есть. Море в 5 минутах — супер! Цена/качество отличное.»</p><p class="author">— Максим, г. Краснодар</p></div>
+        <div class="review-cards">
+            <div class="review-item">
+                <p>«Всё понравилось! Домик чистый, уютный, кровать удобная. До моря реально близко, даже с маленьким ребёнком дошли без проблем. Во дворе мангал, посидели вечером. Спасибо!»</p>
+                <p class="author">— Ольга, г. Воронеж</p>
+            </div>
+            <div class="review-item">
+                <p>«Отличный вариант для Должанки. Тихо, зелено, есть кондиционер (спасает в жару). Хозяйка приветливая, показала всё, рассказала про море и где вкусно поесть. Вернёмся!»</p>
+                <p class="author">— Игорь, г. Москва</p>
+            </div>
+            <div class="review-item">
+                <p>«Снимали с друзьями на выходные. Дом большой, всем места хватило. Мангал, беседка, даже настольные игры есть. Море в 5 минутах — супер! Цена/качество отличное.»</p>
+                <p class="author">— Максим, г. Краснодар</p>
+            </div>
         </div>
     </div>
 </section>
 
+<!-- Расположение и контакты с картой -->
 <section id="contacts">
     <div class="container">
         <h2>Как добраться до нашего домика</h2>
@@ -93,397 +181,492 @@
                 <p>📧 <a href="mailto:dom.dolzhanka@mail.ru" class="email">dom.dolzhanka@mail.ru</a></p>
                 <p style="font-size: 1rem; background: var(--sand-warm); padding: 10px; border-radius: 30px; color: var(--sea-deep);">🔔 Работаем с 2015 года, более 300 довольных семей</p>
             </div>
-            <div class="map-real">
-                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A1a97cc18912791359f15bf15ddd1d55bd51676b02354a72e8100452af17d0df1&amp;source=constructor" width="100%" height="100%" frameborder="0" style="border:0; border-radius: 25px;" allowfullscreen></iframe>
+            
+            <!-- Контейнер для карты -->
+            <div class="map-real" style="position: relative; width: 100%; min-height: 400px;">
+                <!-- Скрипт конструктора ВНУТРИ блока -->
+                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A1a97cc18912791359f15bf15ddd1d55bd51676b02354a72e8100452af17d0df1&amp;width=100%25&amp;height=100%25&amp;lang=ru_RU&amp;scroll=true"></script>
             </div>
         </div>
     </div>
 </section>
 
-<section id="booking">
-    <div class="container">
-        <div class="cta-section">
-            <h3>Свободные даты в июне ещё есть!</h3>
-            <p style="font-size: 1.3rem; margin-bottom: 20px;">Давайте забронируем — достаточно предоплаты 20%</p>
-            <a href="tel:+79528693108" class="cta-button">Позвонить сейчас</a>
-            <div class="social-links">
-                <p style="margin: 30px 0 10px;">или напишите в удобный мессенджер:</p>
-                <div class="social-icons">
-                    <a href="#" class="social-icon max"><img src="icons/Max_logo.svg" alt="Max" width="28" height="28"></a>
-                    <a href="https://t.me/79528693108" class="social-icon telegram"><svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M22 5L2 11.5L9 13.5L19 7L12 16L16 21L22 5Z" stroke="currentColor" stroke-width="1.5"/></svg></a>
-                </div>
-                <p>+7 (952) 869-31-08</p>
+<!-- Бронь (с якорем booking) -->
+<section id="booking" class="container">
+    <div class="cta-section">
+        <h3>Свободные даты в июне ещё есть!</h3>
+        <p style="font-size: 1.3rem; margin-bottom: 20px;">Давайте забронируем — достаточно предоплаты 20%</p>
+        <a href="tel:+79528693108" class="cta-button">Позвонить сейчас</a>
+        
+        <!-- Новый блок с соцсетями (Max и Telegram) -->
+        <div class="social-links">
+            <p style="margin: 30px 0 10px; font-size: 1.1rem;">или напишите в удобный мессенджер:</p>
+            <div class="social-icons">
+                <!-- Max ссылка - исправлена с # на реальную ссылку -->
+                <a href="https://max.ru/domik_v_dolzhanskoy" target="_blank" rel="noopener noreferrer" class="social-icon max" title="Max">
+                    <img src="icons/Max_logo.svg" alt="Max мессенджер" width="28" height="28" style="filter: brightness(0) invert(1);">
+                </a>
+                <!-- Иконка Telegram -->
+                <a href="https://t.me/domik_dolzhanskaya" target="_blank" rel="noopener noreferrer" class="social-icon telegram" title="Telegram">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Telegram">
+                        <path d="M22 5L2 11.5L9 13.5L19 7L12 16L16 21L22 5Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                        <path d="M12 16L9 13.5L16 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
             </div>
+            <p style="margin-top: 10px;">+7 (952) 869-31-08</p>
         </div>
     </div>
 </section>
 
+<!-- Футер с микроразметкой (исправлен тип на LodgingBusiness) -->
 <footer>
     <div class="container">
         <p>© Домик в Должанской, 2026 | Посуточно, без посредников, с любовью к гостям</p>
-        <p style="font-size: 0.9rem;">Краснодарский край, Ейский район, станица Должанская</p>
+        <p style="font-size: 0.9rem; opacity: 0.8;">Краснодарский край, Ейский район, станица Должанская</p>
+        
+        <!-- Schema.org микроразметка (исправлено на LodgingBusiness) -->
+        <div style="display: none;" itemscope itemtype="https://schema.org/LodgingBusiness">
+            <meta itemprop="name" content="Домик у моря в Должанской">
+            <meta itemprop="description" content="Уютный дом в 5 минутах от Азовского моря. 2 спальни, кухня, мангал, парковка.">
+            <meta itemprop="address" content="Станица Должанская, улица Колхозная, 46">
+            <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                <meta itemprop="price" content="2500">
+                <meta itemprop="priceCurrency" content="RUB">
+                <meta itemprop="availability" content="https://schema.org/InStock">
+            </div>
+        </div>
     </div>
 </footer>
 
+<!-- Плавающая иконка в углу (умная - скрывается на hero и в booking) -->
 <div class="floating-corner" id="floatingCorner">
     <a href="#booking" class="corner-button">
         <div class="rotating-text-wrapper">
-            <svg class="corner-icon" width="48" height="48" viewBox="0 0 24 24" fill="none"><path d="M12 3L2 12H5V20H10V14H14V20H19V12H22L12 3Z" fill="currentColor"/></svg>
-            <svg class="rotating-circle-text" viewBox="0 0 100 100"><defs><path id="circlePath" d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none"/></defs><text fill="currentColor" font-size="9.5" font-weight="600"><textPath href="#circlePath">• НАПИШИ НАМ • НАПИШИ НАМ •</textPath></text></svg>
+            <svg class="corner-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Иконка бронирования">
+                <path d="M12 3L2 12H5V20H10V14H14V20H19V12H22L12 3Z" fill="currentColor"/>
+            </svg>
+            <svg class="rotating-circle-text" viewBox="0 0 100 100" width="80" height="80" aria-label="Вращающийся текст">
+                <defs>
+                    <path id="circlePath" d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none" />
+                </defs>
+                <text fill="currentColor" font-size="9.5" font-weight="600" letter-spacing="2">
+                    <textPath href="#circlePath" startOffset="0%">
+                        • НАПИШИ НАМ • НАПИШИ НАМ •
+                    </textPath>
+                </text>
+            </svg>
         </div>
     </a>
 </div>
 
+<!-- Лайтбокс (полноэкранная галерея) -->
 <div class="lightbox" id="lightbox">
     <span class="lightbox-close">&times;</span>
     <span class="lightbox-prev">&#10094;</span>
     <span class="lightbox-next">&#10095;</span>
-    <div class="lightbox-content"><img src="" alt="" id="lightbox-img"><div class="lightbox-caption" id="lightbox-caption"></div></div>
+    <div class="lightbox-content">
+        <img src="" alt="" id="lightbox-img">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
 </div>
 
 <script>
-(function() {
-    // Плавный скролл
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
-            if (href === '#') return;
+// ========== ИСПРАВЛЕННЫЙ JS КОД ==========
+
+// Функция безопасного получения элемента
+function getElement(selector) {
+    const element = document.querySelector(selector);
+    if (!element) {
+        console.warn(`Элемент "${selector}" не найден`);
+    }
+    return element;
+}
+
+// Плавный скролл для якорей (с защитой от пустых ссылок)
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        
+        // Защита от href="#"
+        if (!href || href === '#') {
             e.preventDefault();
-            const target = document.querySelector(href);
-            if (target) target.scrollIntoView({ behavior: 'smooth' });
+            return;
+        }
+        
+        const target = document.querySelector(href);
+        if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+});
+
+// Появление/исчезновение плавающей шапки
+const floatingNav = getElement('#floatingNav');
+if (floatingNav) {
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+        if (currentScroll > 200) {
+            floatingNav.classList.add('visible');
+        } else {
+            floatingNav.classList.remove('visible');
+        }
+    });
+}
+
+// ========== МОБИЛЬНОЕ МЕНЮ (ИСПРАВЛЕНО) ==========
+const burger = getElement('#burger');
+const mobileMenu = getElement('#mobileMenu');
+const overlay = getElement('#menuOverlay');
+
+if (burger && mobileMenu) {
+    // Единый обработчик для бургера (исправлено - один вместо двух)
+    burger.addEventListener('click', () => {
+        burger.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+        if (overlay) overlay.classList.toggle('active');
+        
+        // Блокировка скролла при открытом меню
+        if (mobileMenu.classList.contains('active')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+    });
+    
+    // Закрытие меню при клике на оверлей
+    if (overlay) {
+        overlay.addEventListener('click', () => {
+            burger.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    }
+    
+    // Закрытие меню при клике на любую ссылку в мобильном меню
+    document.querySelectorAll('.mobile-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            burger.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            if (overlay) overlay.classList.remove('active');
+            document.body.style.overflow = '';
         });
     });
+}
 
-    // Мобильное меню
-    const toggle = document.getElementById('mobileMenuToggle');
-    const navLinks = document.getElementById('navLinks');
-    if (toggle && navLinks) {
-        toggle.addEventListener('click', () => {
-            toggle.classList.toggle('active');
-            navLinks.classList.toggle('active');
-        });
-        navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                toggle.classList.remove('active');
-                navLinks.classList.remove('active');
-            });
-        });
-    }
-
-    // Плавающая навигация
-    const floatingNav = document.getElementById('floatingNav');
-    if (floatingNav) {
-        window.addEventListener('scroll', () => {
-            floatingNav.classList.toggle('visible', window.pageYOffset > 200);
-        });
-    }
-
-    // Функция карусели (без кнопок, только свайп)
-    function initCarousel(container, itemSelector) {
-        if (window.innerWidth > 768) return;
-        const items = Array.from(container.querySelectorAll(itemSelector));
-        if (!items.length) return;
-        
-        const track = document.createElement('div');
-        track.className = 'carousel-track';
-        items.forEach(item => {
-            const carouselItem = document.createElement('div');
-            carouselItem.className = 'carousel-item';
-            carouselItem.appendChild(item.cloneNode(true));
-            track.appendChild(carouselItem);
-        });
-        
-        const dotsContainer = document.createElement('div');
-        dotsContainer.className = 'carousel-dots';
-        items.forEach((_, i) => {
-            const dot = document.createElement('div');
-            dot.className = 'carousel-dot';
-            if (i === 0) dot.classList.add('active');
-            dot.addEventListener('click', () => {
-                const w = track.querySelector('.carousel-item')?.offsetWidth || 0;
-                track.scrollTo({ left: w * i, behavior: 'smooth' });
-            });
-            dotsContainer.appendChild(dot);
-        });
-        
-        const updateDots = () => {
-            const w = track.querySelector('.carousel-item')?.offsetWidth || 0;
-            if (w === 0) return;
-            const idx = Math.round(track.scrollLeft / w);
-            dotsContainer.querySelectorAll('.carousel-dot').forEach((d, i) => {
-                d.classList.toggle('active', i === idx);
-            });
-        };
-        
-        track.addEventListener('scroll', updateDots);
-        
-        const carouselContainer = document.createElement('div');
-        carouselContainer.className = 'carousel-container';
-        carouselContainer.appendChild(track);
-        carouselContainer.appendChild(dotsContainer);
-        
-        container.innerHTML = '';
-        container.appendChild(carouselContainer);
-        container.classList.add('carousel-mode');
-    }
-    
-    // Инициализация каруселей
-    const featuresGrid = document.getElementById('featuresGrid');
-    const reviewsGrid = document.getElementById('reviewsGrid');
-    if (window.innerWidth <= 768) {
-        if (featuresGrid) initCarousel(featuresGrid, '.feature-card');
-        if (reviewsGrid) initCarousel(reviewsGrid, '.review-item');
-    }
-    
-    // Данные для галереи
+// ========== УМНАЯ МОЗАИЧНАЯ ГАЛЕРЕЯ С ЛАЙТБОКСОМ ==========
+document.addEventListener('DOMContentLoaded', function() {
+    // --- Данные о фотографиях ---
     const photos = [
-        { src: 'img/photo_1_2026-03-09_16-52-27.jpg', alt: 'Спальня с мягким светом' },
-        { src: 'img/photo_2_2026-03-09_16-52-27.jpg', alt: 'Вторая спальня' },
-        { src: 'img/photo_3_2026-03-09_16-52-27.jpg', alt: 'Гостиная' },
-        { src: 'img/photo_4_2026-03-09_16-52-27.jpg', alt: 'Ванная комната' },
-        { src: 'img/photo_5_2026-03-09_16-52-27.jpg', alt: 'Чистота и комфорт' },
-        { src: 'img/photo_6_2026-03-09_16-52-27.jpg', alt: 'Фасад дома' },
-        { src: 'img/photo_7_2026-03-09_16-52-27.jpg', alt: 'Обеденная зона' },
-        { src: 'img/photo_8_2026-03-09_16-52-27.jpg', alt: 'Кухня' }
+        { src: 'img/photo_1_2026-03-09_16-52-27.jpg', alt: 'Спальня с мягким светом и деревянной кроватью' },
+        { src: 'img/photo_2_2026-03-09_16-52-27.jpg', alt: 'Вторая спальня с уютным текстилем' },
+        { src: 'img/photo_3_2026-03-09_16-52-27.jpg', alt: 'Просторная гостиная с диваном и телевизором' },
+        { src: 'img/photo_4_2026-03-09_16-52-27.jpg', alt: 'Современная ванная комната с душевой кабиной' },
+        { src: 'img/photo_5_2026-03-09_16-52-27.jpg', alt: 'Чистота и комфорт в ванной' },
+        { src: 'img/photo_6_2026-03-09_16-52-27.jpg', alt: 'Уютный фасад дома с зелёным двориком' },
+        { src: 'img/photo_7_2026-03-09_16-52-27.jpg', alt: 'Обеденная зона на кухне' },
+        { src: 'img/photo_8_2026-03-09_16-52-27.jpg', alt: 'Кухня со всей необходимой техникой' }
     ];
-    
+
+    // --- Текстовые плашки ---
     const infoBlocks = [
-        { icon: '🏡', title: 'Ваш дом вдали от дома', text: 'Продумано до мелочей' },
-        { icon: '🌅', title: 'Ловите рассветы', text: 'До морской косы 1 км' },
-        { icon: '🍉', title: 'Отдых для всей семьи', text: 'Много места' },
-        { icon: '🔥', title: 'Вечерние посиделки', text: 'Мангал, беседка' },
-        { icon: '🌊', title: 'Азовское море', text: 'Мелкое и тёплое' }
+        { icon: '🏡', title: 'Ваш дом вдали от дома', text: 'Продумано до мелочей для вашего комфорта.' },
+        { icon: '🌅', title: 'Ловите рассветы', text: 'До морской косы всего 1 километр.' },
+        { icon: '🍉', title: 'Отдых для всей семьи', text: 'Много места для любой компании.' },
+        { icon: '🔥', title: 'Вечерние посиделки', text: 'Мангал, беседка и тёплая атмосфера.' },
+        { icon: '🌊', title: 'Азовское море', text: 'Мелкое и тёплое — идеально для детей.' }
     ];
-    
-    const gridContainer = document.getElementById('dynamicMosaicGrid');
-    if (gridContainer) {
-        function shuffleArray(arr) {
-            for (let i = arr.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [arr[i], arr[j]] = [arr[j], arr[i]];
-            }
-            return arr;
-        }
-        
-        // Полная мозаичная верстка с определением ориентации
-        function getImageOrientation(src) {
-            return new Promise((resolve) => {
-                const img = new Image();
-                img.onload = function() {
-                    const ratio = this.width / this.height;
-                    if (ratio > 1.2) resolve('landscape');
-                    else if (ratio < 0.8) resolve('portrait');
-                    else resolve('square');
-                };
-                img.onerror = () => resolve('square');
-                img.src = src;
-            });
-        }
-        
-        function getItemSpan(orientation) {
-            switch(orientation) {
-                case 'landscape': return { col: 2, row: 1 };
-                case 'portrait': return { col: 1, row: 2 };
-                default: return { col: 1, row: 1 };
-            }
-        }
-        
-        async function buildMosaic() {
-            gridContainer.innerHTML = '';
-            
-            let photoItems = await Promise.all(photos.map(async (photo, index) => {
-                const orientation = await getImageOrientation(photo.src);
-                return {
-                    type: 'photo',
-                    src: photo.src,
-                    alt: photo.alt,
-                    orientation: orientation,
-                    span: getItemSpan(orientation),
-                    originalIndex: index
-                };
-            }));
-            
-            photoItems = shuffleArray(photoItems);
-            let shuffledInfoBlocks = shuffleArray([...infoBlocks]);
-            
-            const gridCols = 3;
-            let gridMatrix = [];
-            let currentRow = 0;
-            
-            function findFreeSpot(spanCols, spanRows) {
-                for (let r = 0; r <= currentRow + 2; r++) {
-                    if (!gridMatrix[r]) gridMatrix[r] = new Array(gridCols).fill(false);
-                    for (let c = 0; c <= gridCols - spanCols; c++) {
-                        let free = true;
-                        for (let dr = 0; dr < spanRows; dr++) {
-                            for (let dc = 0; dc < spanCols; dc++) {
-                                if (!gridMatrix[r + dr]) gridMatrix[r + dr] = new Array(gridCols).fill(false);
-                                if (gridMatrix[r + dr][c + dc]) { free = false; break; }
-                            }
-                            if (!free) break;
-                        }
-                        if (free) return { row: r, col: c };
-                    }
-                }
-                const newRow = gridMatrix.length;
-                if (!gridMatrix[newRow]) gridMatrix[newRow] = new Array(gridCols).fill(false);
-                return { row: newRow, col: 0 };
-            }
-            
-            for (const photo of photoItems) {
-                const spot = findFreeSpot(photo.span.col, photo.span.row);
-                for (let dr = 0; dr < photo.span.row; dr++) {
-                    for (let dc = 0; dc < photo.span.col; dc++) {
-                        if (!gridMatrix[spot.row + dr]) gridMatrix[spot.row + dr] = new Array(gridCols).fill(false);
-                        gridMatrix[spot.row + dr][spot.col + dc] = 'photo';
-                    }
-                }
-                photo.row = spot.row;
-                photo.col = spot.col;
-                if (spot.row + photo.span.row - 1 > currentRow) {
-                    currentRow = spot.row + photo.span.row - 1;
-                }
-            }
-            
-            let infoIndex = 0;
-            for (let r = 0; r <= currentRow; r++) {
-                for (let c = 0; c < gridCols; c++) {
-                    if (!gridMatrix[r]?.[c] && infoIndex < shuffledInfoBlocks.length) {
-                        let canPlace = true;
-                        if (gridMatrix[r]?.[c]) canPlace = false;
-                        if (canPlace) {
-                            if (!gridMatrix[r]) gridMatrix[r] = new Array(gridCols).fill(false);
-                            gridMatrix[r][c] = 'info';
-                            if (!shuffledInfoBlocks[infoIndex].placed) {
-                                shuffledInfoBlocks[infoIndex].row = r;
-                                shuffledInfoBlocks[infoIndex].col = c;
-                                shuffledInfoBlocks[infoIndex].placed = true;
-                                infoIndex++;
-                            }
-                        }
-                    }
-                }
-            }
-            
-            const allItems = [...photoItems];
-            shuffledInfoBlocks.forEach((block) => {
-                if (block.placed) {
-                    allItems.push({
-                        type: 'info',
-                        data: block,
-                        row: block.row,
-                        col: block.col,
-                        span: { col: 1, row: 1 }
-                    });
-                }
-            });
-            
-            allItems.sort((a, b) => {
-                if (a.row !== b.row) return a.row - b.row;
-                return a.col - b.col;
-            });
-            
-            for (const item of allItems) {
-                const element = document.createElement('div');
-                element.className = 'mosaic-item';
-                element.style.gridColumn = `${item.col + 1} / span ${item.span.col}`;
-                element.style.gridRow = `${item.row + 1} / span ${item.span.row}`;
-                
-                if (item.type === 'photo') {
-                    element.innerHTML = `<img src="${item.src}" alt="${item.alt}" loading="lazy" data-index="${item.originalIndex}"><div class="mosaic-caption">${item.alt}</div>`;
-                    element.querySelector('img').addEventListener('click', (e) => {
-                        e.stopPropagation();
-                        openLightbox(item.originalIndex);
-                    });
+
+    const gridContainer = getElement('#dynamicMosaicGrid');
+    if (!gridContainer) return;
+
+    // Функция для определения ориентации изображения (с fallback)
+    function getImageOrientation(src) {
+        return new Promise((resolve) => {
+            const img = new Image();
+            img.onload = function() {
+                const ratio = this.width / this.height;
+                if (ratio > 1.2) {
+                    resolve('landscape');
+                } else if (ratio < 0.8) {
+                    resolve('portrait');
                 } else {
-                    element.classList.add('mosaic-info-block');
-                    element.innerHTML = `<div class="info-content"><div class="info-icon">${item.data.icon}</div><h3>${item.data.title}</h3><p>${item.data.text}</p></div>`;
+                    resolve('square');
                 }
-                gridContainer.appendChild(element);
+            };
+            img.onerror = function() {
+                console.warn(`Не удалось загрузить изображение: ${src}`);
+                resolve('landscape'); // Fallback
+            };
+            img.src = src;
+        });
+    }
+
+    function getItemSpan(orientation) {
+        switch(orientation) {
+            case 'landscape': return { col: 2, row: 1 };
+            case 'portrait': return { col: 1, row: 2 };
+            default: return { col: 1, row: 1 };
+        }
+    }
+
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    }
+
+    async function buildMosaic() {
+        gridContainer.innerHTML = '';
+
+        let photoItems = await Promise.all(photos.map(async (photo, index) => {
+            const orientation = await getImageOrientation(photo.src);
+            return {
+                type: 'photo',
+                src: photo.src,
+                alt: photo.alt,
+                orientation: orientation,
+                span: getItemSpan(orientation),
+                originalIndex: index
+            };
+        }));
+
+        photoItems = shuffleArray(photoItems);
+        let shuffledInfoBlocks = shuffleArray([...infoBlocks]);
+
+        const gridCols = 3;
+        let gridMatrix = [];
+        let currentRow = 0;
+
+        function findFreeSpot(spanCols, spanRows) {
+            for (let r = 0; r <= currentRow + 2; r++) {
+                if (!gridMatrix[r]) gridMatrix[r] = new Array(gridCols).fill(false);
+                
+                for (let c = 0; c <= gridCols - spanCols; c++) {
+                    let free = true;
+                    for (let dr = 0; dr < spanRows; dr++) {
+                        for (let dc = 0; dc < spanCols; dc++) {
+                            if (!gridMatrix[r + dr]) gridMatrix[r + dr] = new Array(gridCols).fill(false);
+                            if (gridMatrix[r + dr][c + dc]) {
+                                free = false;
+                                break;
+                            }
+                        }
+                        if (!free) break;
+                    }
+                    
+                    if (free) {
+                        return { row: r, col: c };
+                    }
+                }
+            }
+            const newRow = gridMatrix.length;
+            if (!gridMatrix[newRow]) gridMatrix[newRow] = new Array(gridCols).fill(false);
+            return { row: newRow, col: 0 };
+        }
+
+        for (const photo of photoItems) {
+            const spot = findFreeSpot(photo.span.col, photo.span.row);
+            
+            for (let dr = 0; dr < photo.span.row; dr++) {
+                for (let dc = 0; dc < photo.span.col; dc++) {
+                    if (!gridMatrix[spot.row + dr]) 
+                        gridMatrix[spot.row + dr] = new Array(gridCols).fill(false);
+                    gridMatrix[spot.row + dr][spot.col + dc] = 'photo';
+                }
+            }
+            
+            photo.row = spot.row;
+            photo.col = spot.col;
+            
+            if (spot.row + photo.span.row - 1 > currentRow) {
+                currentRow = spot.row + photo.span.row - 1;
             }
         }
+
+        let infoIndex = 0;
+        for (let r = 0; r <= currentRow; r++) {
+            for (let c = 0; c < gridCols; c++) {
+                if (!gridMatrix[r]?.[c] && infoIndex < shuffledInfoBlocks.length) {
+                    let canPlace = true;
+                    for (let dr = 0; dr < 1; dr++) {
+                        for (let dc = 0; dc < 1; dc++) {
+                            if (gridMatrix[r + dr]?.[c + dc]) {
+                                canPlace = false;
+                                break;
+                            }
+                        }
+                    }
+                    
+                    if (canPlace) {
+                        if (!gridMatrix[r]) gridMatrix[r] = new Array(gridCols).fill(false);
+                        gridMatrix[r][c] = 'info';
+                        
+                        if (!shuffledInfoBlocks[infoIndex].placed) {
+                            shuffledInfoBlocks[infoIndex].row = r;
+                            shuffledInfoBlocks[infoIndex].col = c;
+                            shuffledInfoBlocks[infoIndex].placed = true;
+                            infoIndex++;
+                        }
+                    }
+                }
+            }
+        }
+
+        const allItems = [...photoItems];
         
-        buildMosaic();
+        shuffledInfoBlocks.forEach((block) => {
+            if (block.placed) {
+                allItems.push({
+                    type: 'info',
+                    data: block,
+                    row: block.row,
+                    col: block.col,
+                    span: { col: 1, row: 1 }
+                });
+            }
+        });
+
+        allItems.sort((a, b) => {
+            if (a.row !== b.row) return a.row - b.row;
+            return a.col - b.col;
+        });
+
+        for (const item of allItems) {
+            const element = document.createElement('div');
+            element.className = 'mosaic-item';
+            
+            element.style.gridColumn = `${item.col + 1} / span ${item.span.col}`;
+            element.style.gridRow = `${item.row + 1} / span ${item.span.row}`;
+
+            if (item.type === 'photo') {
+                element.innerHTML = `
+                    <img src="${item.src}" alt="${item.alt}" loading="lazy" data-index="${item.originalIndex}">
+                    <div class="mosaic-caption">${item.alt}</div>
+                `;
+                
+                const img = element.querySelector('img');
+                img.addEventListener('click', function() {
+                    openLightbox(item.originalIndex);
+                });
+            } else {
+                element.classList.add('mosaic-info-block');
+                element.innerHTML = `
+                    <div class="info-content">
+                        <span class="info-icon">${item.data.icon}</span>
+                        <h3>${item.data.title}</h3>
+                        <p>${item.data.text}</p>
+                    </div>
+                `;
+            }
+            gridContainer.appendChild(element);
+        }
     }
+
+    // ========== ЛАЙТБОКС ==========
+    const lightbox = getElement('#lightbox');
+    const lightboxImg = getElement('#lightbox-img');
+    const lightboxCaption = getElement('#lightbox-caption');
+    const lightboxClose = getElement('.lightbox-close');
+    const lightboxPrev = getElement('.lightbox-prev');
+    const lightboxNext = getElement('.lightbox-next');
     
-    // Лайтбокс
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-    const lightboxCaption = document.getElementById('lightbox-caption');
-    let currentIdx = 0;
-    
-    function openLightbox(idx) {
-        currentIdx = idx;
-        lightboxImg.src = photos[currentIdx].src;
-        lightboxCaption.textContent = photos[currentIdx].alt;
+    let currentImageIndex = 0;
+
+    function openLightbox(index) {
+        if (!lightbox || !lightboxImg) return;
+        currentImageIndex = index;
+        updateLightboxImage();
         lightbox.classList.add('active');
         document.body.style.overflow = 'hidden';
     }
-    
+
     function closeLightbox() {
+        if (!lightbox) return;
         lightbox.classList.remove('active');
         document.body.style.overflow = '';
     }
-    
-    function prevImage() {
-        currentIdx = (currentIdx - 1 + photos.length) % photos.length;
-        lightboxImg.src = photos[currentIdx].src;
-        lightboxCaption.textContent = photos[currentIdx].alt;
-    }
-    
-    function nextImage() {
-        currentIdx = (currentIdx + 1) % photos.length;
-        lightboxImg.src = photos[currentIdx].src;
-        lightboxCaption.textContent = photos[currentIdx].alt;
-    }
-    
-    document.querySelector('.lightbox-close')?.addEventListener('click', closeLightbox);
-    document.querySelector('.lightbox-prev')?.addEventListener('click', prevImage);
-    document.querySelector('.lightbox-next')?.addEventListener('click', nextImage);
-    lightbox?.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
-    document.addEventListener('keydown', (e) => {
-        if (!lightbox.classList.contains('active')) return;
-        if (e.key === 'Escape') closeLightbox();
-        if (e.key === 'ArrowLeft') prevImage();
-        if (e.key === 'ArrowRight') nextImage();
-    });
-    
-    // Плавающая кнопка
-    const floatingCorner = document.getElementById('floatingCorner');
-    const hero = document.getElementById('hero');
-    const booking = document.getElementById('booking');
-    
-    function checkCorner() {
-        if (!floatingCorner || !hero || !booking) return;
-        const scrollY = window.scrollY;
-        const heroBottom = hero.offsetTop + hero.offsetHeight;
-        const bookingTop = booking.offsetTop;
-        const bookingBottom = booking.offsetTop + booking.offsetHeight;
-        if (scrollY < heroBottom - 100 || (scrollY + 100 > bookingTop && scrollY - 100 < bookingBottom)) {
-            floatingCorner.classList.add('hidden');
-        } else {
-            floatingCorner.classList.remove('hidden');
+
+    function updateLightboxImage() {
+        if (!lightboxImg || !lightboxCaption) return;
+        const photo = photos[currentImageIndex];
+        if (photo) {
+            lightboxImg.src = photo.src;
+            lightboxImg.alt = photo.alt;
+            lightboxCaption.textContent = photo.alt;
         }
     }
+
+    function prevImage() {
+        currentImageIndex = (currentImageIndex - 1 + photos.length) % photos.length;
+        updateLightboxImage();
+    }
+
+    function nextImage() {
+        currentImageIndex = (currentImageIndex + 1) % photos.length;
+        updateLightboxImage();
+    }
+
+    if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+    if (lightboxPrev) lightboxPrev.addEventListener('click', prevImage);
+    if (lightboxNext) lightboxNext.addEventListener('click', nextImage);
+
+    if (lightbox) {
+        lightbox.addEventListener('click', function(e) {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+    }
+
+    document.addEventListener('keydown', function(e) {
+        if (!lightbox?.classList.contains('active')) return;
+        
+        if (e.key === 'Escape') {
+            closeLightbox();
+        } else if (e.key === 'ArrowLeft') {
+            prevImage();
+        } else if (e.key === 'ArrowRight') {
+            nextImage();
+        }
+    });
+
+    buildMosaic();
+});
+
+// ========== УМНАЯ ПЛАВАЮЩАЯ КНОПКА (с проверкой элементов) ==========
+const floatingCorner = getElement('#floatingCorner');
+const heroSection = getElement('#hero');
+const bookingSection = getElement('#booking');
+
+function checkFloatingCornerVisibility() {
+    if (!floatingCorner) return;
+    if (!heroSection || !bookingSection) {
+        // Если секции не найдены, показываем кнопку
+        floatingCorner.classList.remove('hidden');
+        return;
+    }
     
-    window.addEventListener('scroll', checkCorner);
-    checkCorner();
-})();
+    const scrollY = window.scrollY;
+    const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+    const bookingTop = bookingSection.offsetTop;
+    const bookingBottom = bookingSection.offsetTop + bookingSection.offsetHeight;
+    
+    if (scrollY < heroBottom - 100 || (scrollY + 100 > bookingTop && scrollY - 100 < bookingBottom)) {
+        floatingCorner.classList.add('hidden');
+    } else {
+        floatingCorner.classList.remove('hidden');
+    }
+}
 
-const overlay = document.getElementById('menuOverlay');
-
-toggle.addEventListener('click', () => {
-    overlay.classList.toggle('active');
-    document.body.style.overflow = toggle.classList.contains('active') ? 'hidden' : '';
-});
-
-overlay.addEventListener('click', () => {
-    toggle.classList.remove('active');
-    navLinks.classList.remove('active');
-    overlay.classList.remove('active');
-    document.body.style.overflow = '';
-});
-
+if (floatingCorner) {
+    window.addEventListener('scroll', checkFloatingCornerVisibility);
+    document.addEventListener('DOMContentLoaded', checkFloatingCornerVisibility);
+}
 </script>
 
 </body>
