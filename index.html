@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
     <!-- Основные SEO мета-теги -->
     <title>Домик у моря в Должанской | Посуточно, уютно, рядом с морем</title>
@@ -240,20 +240,20 @@
     </div>
 </footer>
 
-<!-- Плавающая кнопка -->
+<!-- Плавающая кнопка с текстом "Напиши нам" (исправлено для мобильных) -->
 <div class="floating-corner" id="floatingCorner">
     <a href="#booking" class="corner-button">
         <div class="rotating-text-wrapper">
             <svg class="corner-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Иконка бронирования">
                 <path d="M12 3L2 12H5V20H10V14H14V20H19V12H22L12 3Z" fill="currentColor"/>
             </svg>
-            <svg class="rotating-circle-text" viewBox="0 0 100 100" width="80" height="80" aria-label="Вращающийся текст">
+            <svg class="rotating-circle-text" viewBox="0 0 100 100" width="90" height="90" aria-label="Вращающийся текст">
                 <defs>
                     <path id="circlePath" d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none" />
                 </defs>
-                <text fill="currentColor" font-size="9.5" font-weight="600" letter-spacing="2">
+                <text fill="currentColor" font-size="9" font-weight="700" letter-spacing="2">
                     <textPath href="#circlePath" startOffset="0%">
-                        • НАПИШИ НАМ •• НАПИШИ НАМ •
+                        • НАПИШИ НАМ • НАПИШИ НАМ •
                     </textPath>
                 </text>
             </svg>
@@ -359,7 +359,8 @@ document.addEventListener('DOMContentLoaded', function() {
         { src: 'img/photo_5_2026-03-09_16-52-27.jpg', alt: 'Чистота и комфорт в ванной' },
         { src: 'img/photo_6_2026-03-09_16-52-27.jpg', alt: 'Уютный фасад дома с зелёным двориком' },
         { src: 'img/photo_7_2026-03-09_16-52-27.jpg', alt: 'Обеденная зона на кухне' },
-        { src: 'img/photo_8_2026-03-09_16-52-27.jpg', alt: 'Кухня со всей необходимой техникой' }
+        { src: 'img/photo_8_2026-03-09_16-52-27.jpg', alt: 'Кухня со всей необходимой техникой' },
+        { src: 'img/photo_9_2026-03-09_16-52-27.jpg.jpg', alt: 'Беседка с мангальной зоной' }
     ];
 
     const infoBlocks = [
@@ -373,7 +374,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const gridContainer = getElement('#dynamicMosaicGrid');
     if (!gridContainer) return;
 
-    // Функция создания элемента-заглушки
     function createSkeletonElement(width, height, aspectClass) {
         const skeleton = document.createElement('div');
         skeleton.className = `mosaic-item skeleton-item ${aspectClass}`;
@@ -386,7 +386,6 @@ document.addEventListener('DOMContentLoaded', function() {
         return skeleton;
     }
 
-    // Функция загрузки изображения с таймаутом и заглушкой
     function loadImageWithFallback(imgElement, src, alt, onLoadCallback) {
         const timeoutId = setTimeout(() => {
             if (imgElement.parentElement) {
@@ -397,7 +396,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 imgElement.style.display = 'none';
                 imgElement.parentElement.appendChild(errorDiv);
             }
-        }, 8000); // 8 секунд таймаут
+        }, 8000);
 
         imgElement.onload = () => {
             clearTimeout(timeoutId);
@@ -424,7 +423,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return new Promise((resolve) => {
             const img = new Image();
             const timeoutId = setTimeout(() => {
-                resolve('landscape'); // Таймаут — считаем ландшафтом
+                resolve('landscape');
             }, 3000);
             
             img.onload = function() {
@@ -461,7 +460,6 @@ document.addEventListener('DOMContentLoaded', function() {
     async function buildMosaic() {
         gridContainer.innerHTML = '';
         
-        // Показываем скелетон-заглушки сразу
         for (let i = 0; i < photos.length + 2; i++) {
             const skeleton = createSkeletonElement(1, 1, 'skeleton-square');
             skeleton.style.gridColumn = `span 1`;
@@ -582,7 +580,6 @@ document.addEventListener('DOMContentLoaded', function() {
             return a.col - b.col;
         });
 
-        // Очищаем скелетоны и строим реальные элементы
         gridContainer.innerHTML = '';
 
         for (const item of allItems) {
@@ -593,10 +590,8 @@ document.addEventListener('DOMContentLoaded', function() {
             element.style.gridRow = `${item.row + 1} / span ${item.span.row}`;
 
             if (item.type === 'photo') {
-                // Добавляем класс для ориентации
                 element.classList.add(`mosaic-${item.orientation}`);
                 
-                // Создаём img и заглушку
                 const imgWrapper = document.createElement('div');
                 imgWrapper.className = 'image-wrapper';
                 
@@ -604,7 +599,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 img.loading = 'lazy';
                 img.setAttribute('data-index', item.originalIndex);
                 
-                // Показываем заглушку до загрузки
                 const loader = document.createElement('div');
                 loader.className = 'image-loader';
                 loader.innerHTML = '<div class="spinner"></div><span>Загрузка...</span>';
@@ -617,7 +611,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 caption.textContent = item.alt;
                 element.appendChild(caption);
                 
-                // Загружаем изображение
                 loadImageWithFallback(img, item.src, item.alt, () => {
                     loader.style.opacity = '0';
                     setTimeout(() => loader.remove(), 300);
@@ -640,7 +633,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Лайтбокс (остаётся без изменений)
     const lightbox = getElement('#lightbox');
     const lightboxImg = getElement('#lightbox-img');
     const lightboxCaption = getElement('#lightbox-caption');

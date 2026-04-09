@@ -1174,11 +1174,11 @@ footer p:first-child {
     font-size: 1.1rem;
 }
 
-/* ========== ПЛАВАЮЩАЯ КНОПКА В УГЛУ (исправлено для мобильных) ========== */
+/* ========== ПЛАВАЮЩАЯ КНОПКА В УГЛУ (ИСПРАВЛЕНО ДЛЯ МОБИЛЬНЫХ) ========== */
 .floating-corner {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: 20px;
+    right: 20px;
     z-index: 999;
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
@@ -1204,8 +1204,8 @@ footer p:first-child {
 
 .rotating-text-wrapper {
     position: relative;
-    width: 90px;
-    height: 90px;
+    width: 100px;
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1213,8 +1213,8 @@ footer p:first-child {
 
 .corner-icon {
     position: absolute;
-    width: 48px;
-    height: 48px;
+    width: 52px;
+    height: 52px;
     color: white;
     background: var(--sea-deep);
     border-radius: 50%;
@@ -1234,8 +1234,8 @@ footer p:first-child {
 
 .rotating-circle-text {
     position: absolute;
-    width: 90px;
-    height: 90px;
+    width: 100px;
+    height: 100px;
     animation: rotate 12s linear infinite;
     z-index: 1;
     filter: drop-shadow(0 2px 2px rgba(0,0,0,0.2));
@@ -1244,7 +1244,8 @@ footer p:first-child {
 .rotating-circle-text text {
     fill: var(--sea-deep);
     font-weight: 700;
-    letter-spacing: 2px;
+    letter-spacing: 2.5px;
+    font-size: 9.5px;
 }
 
 .corner-button:hover .rotating-circle-text text {
@@ -1260,45 +1261,76 @@ footer p:first-child {
     to { transform: rotate(360deg); }
 }
 
-/* Исправление для мобильных — кнопка остаётся видимой и читаемой */
-@media (max-width: 480px) {
-    .floating-corner {
-        bottom: 20px;
-        right: 20px;
-    }
-    
-    .rotating-text-wrapper {
-        width: 70px;
-        height: 70px;
-    }
-    
-    .corner-icon {
-        width: 40px;
-        height: 40px;
-        padding: 9px;
-    }
-    
-    .rotating-circle-text {
-        width: 70px;
-        height: 70px;
-    }
-    
-    .rotating-circle-text text {
-        font-size: 7.5px;
-        letter-spacing: 1.5px;
-        fill: var(--sea-deep);
-    }
-}
-
-@media (max-width: 360px) {
+/* Специальные исправления для мобильных устройств — текст "НАПИШИ НАМ" всегда виден */
+@media (max-width: 768px) {
     .floating-corner {
         bottom: 15px;
         right: 15px;
     }
     
     .rotating-text-wrapper {
-        width: 60px;
-        height: 60px;
+        width: 85px;
+        height: 85px;
+    }
+    
+    .corner-icon {
+        width: 44px;
+        height: 44px;
+        padding: 10px;
+    }
+    
+    .rotating-circle-text {
+        width: 85px;
+        height: 85px;
+    }
+    
+    .rotating-circle-text text {
+        font-size: 8px;
+        letter-spacing: 2px;
+        fill: var(--sea-deep);
+        font-weight: 700;
+    }
+}
+
+@media (max-width: 480px) {
+    .floating-corner {
+        bottom: 12px;
+        right: 12px;
+    }
+    
+    .rotating-text-wrapper {
+        width: 75px;
+        height: 75px;
+    }
+    
+    .corner-icon {
+        width: 38px;
+        height: 38px;
+        padding: 8px;
+    }
+    
+    .rotating-circle-text {
+        width: 75px;
+        height: 75px;
+    }
+    
+    .rotating-circle-text text {
+        font-size: 7px;
+        letter-spacing: 1.8px;
+        fill: var(--sea-deep);
+        font-weight: 700;
+    }
+}
+
+@media (max-width: 380px) {
+    .floating-corner {
+        bottom: 10px;
+        right: 10px;
+    }
+    
+    .rotating-text-wrapper {
+        width: 68px;
+        height: 68px;
     }
     
     .corner-icon {
@@ -1308,91 +1340,16 @@ footer p:first-child {
     }
     
     .rotating-circle-text {
-        width: 60px;
-        height: 60px;
+        width: 68px;
+        height: 68px;
     }
     
     .rotating-circle-text text {
-        font-size: 6px;
-        letter-spacing: 1px;
-        fill: var(--sea-deep);
-    }
-}
-@keyframes rotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-
-.corner-button:hover .rotating-circle-text {
-    color: var(--olive);
-    animation-duration: 8s;
-}
-
-/* Исправление для мобильных — кнопка остаётся видимой и читаемой */
-@media (max-width: 480px) {
-    .floating-corner {
-        bottom: 20px;
-        right: 20px;
-    }
-    
-    .rotating-text-wrapper {
-        width: 65px;
-        height: 65px;
-    }
-    
-    .corner-icon {
-        width: 38px;
-        height: 38px;
-        padding: 9px;
-    }
-    
-    .rotating-circle-text {
-        width: 65px;
-        height: 65px;
-    }
-    
-    .rotating-circle-text text {
-        font-size: 7px;
+        font-size: 6.2px;
         letter-spacing: 1.5px;
+        fill: var(--sea-deep);
+        font-weight: 700;
     }
-}
-
-@media (max-width: 360px) {
-    .floating-corner {
-        bottom: 15px;
-        right: 15px;
-    }
-    
-    .rotating-text-wrapper {
-        width: 55px;
-        height: 55px;
-    }
-    
-    .corner-icon {
-        width: 32px;
-        height: 32px;
-        padding: 7px;
-    }
-    
-    .rotating-circle-text {
-        width: 55px;
-        height: 55px;
-    }
-    
-    .rotating-circle-text text {
-        font-size: 6px;
-        letter-spacing: 1px;
-    }
-}
-
-@keyframes rotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-
-.corner-button:hover .rotating-circle-text {
-    color: var(--olive);
-    animation-duration: 8s;
 }
 
 /* ========== ОБЪЕДИНЕННЫЙ АДАПТИВ ========== */
@@ -1554,20 +1511,6 @@ footer p:first-child {
     
     .social-icons {
         gap: 15px;
-    }
-    
-    .floating-corner {
-        bottom: 15px;
-        right: 15px;
-    }
-    
-    .corner-button {
-        padding: 10px 20px;
-    }
-    
-    .corner-button svg {
-        width: 24px;
-        height: 24px;
     }
     
     .lightbox-prev,
