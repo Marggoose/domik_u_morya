@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://marggoose.github.io/domik_u_morya/sitemap.xml
