@@ -615,15 +615,34 @@ h2:after {
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(to top, rgba(25, 81, 154, 0.95), transparent);
     color: white;
     padding: 30px 15px 15px;
     font-size: 0.95rem;
     font-weight: 500;
-    transform: translateY(100%);
     transition: transform 0.3s ease;
     text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-    backdrop-filter: blur(3px);
+    pointer-events: none;
+    z-index: 2;
+}
+
+
+/* Показываем подписи всегда, но полупрозрачно */
+.mosaic-caption.always-visible {
+    transform: translateY(0);
+    background: linear-gradient(to top, rgba(25, 81, 154, 0.85), rgba(25, 81, 154, 0.3));
+    font-size: 0.85rem;
+    padding: 12px 12px 8px;
+    backdrop-filter: blur(2px);
+}
+
+.mosaic-item:hover .mosaic-caption:not(.always-visible) {
+    transform: translateY(0);
+}
+
+.mosaic-item:hover .mosaic-caption.always-visible {
+    background: linear-gradient(to top, var(--sea-deep), var(--olive));
+    font-weight: 600;
+    padding: 12px 12px 8px;
 }
 
 .mosaic-item:hover .mosaic-caption {
@@ -1747,17 +1766,4 @@ footer p:first-child {
     .seo-text-block h2 {
         font-size: 1.5rem;
     }
-}
-
-/* Показываем подписи всегда, но полупрозрачно */
-.mosaic-caption.always-visible {
-    transform: translateY(0);
-    background: linear-gradient(to top, rgba(25, 81, 154, 0.85), rgba(25, 81, 154, 0.3));
-    font-size: 0.85rem;
-    padding: 15px 12px 10px;
-    backdrop-filter: blur(2px);
-}
-.mosaic-item:hover .mosaic-caption.always-visible {
-    background: linear-gradient(to top, var(--sea-deep), var(--olive));
-    font-weight: 600;
 }
