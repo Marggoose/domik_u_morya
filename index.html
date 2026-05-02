@@ -780,5 +780,16 @@ if (floatingCorner) {
 }
 </script>
 
+<script>
+(function() {
+    // Редирект с www на non-www для GitHub Pages
+    if (window.location.hostname === 'www.marggoose.github.io') {
+        window.location.href = window.location.protocol + '//' + 
+            window.location.hostname.replace('www.', '') + 
+            window.location.pathname + window.location.search;
+    }
+})();
+</script>
+
 </body>
 </html>
