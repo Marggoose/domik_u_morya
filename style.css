@@ -1707,3 +1707,57 @@ footer p:first-child {
 .cta-button {
     border-radius: 60px;
 }
+
+/* Блок для SEO-текста */
+.seo-description {
+    background: var(--white-pure);
+    border-radius: 40px;
+    padding: 50px 30px;
+    margin: 40px auto;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+    border: 1px solid var(--sand-warm);
+}
+
+.seo-text-block h2 {
+    text-align: left;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+}
+.seo-text-block h2:after {
+    margin: 15px 0 0 0; /* Выравнивание черточки влево */
+}
+
+.seo-text-block p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: var(--pebble);
+    font-size: 1rem;
+}
+
+.seo-text-block strong {
+    color: var(--sea-deep);
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .seo-description {
+        padding: 30px 20px;
+        margin: 20px 0;
+    }
+    .seo-text-block h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Показываем подписи всегда, но полупрозрачно */
+.mosaic-caption.always-visible {
+    transform: translateY(0);
+    background: linear-gradient(to top, rgba(25, 81, 154, 0.85), rgba(25, 81, 154, 0.3));
+    font-size: 0.85rem;
+    padding: 15px 12px 10px;
+    backdrop-filter: blur(2px);
+}
+.mosaic-item:hover .mosaic-caption.always-visible {
+    background: linear-gradient(to top, var(--sea-deep), var(--olive));
+    font-weight: 600;
+}
